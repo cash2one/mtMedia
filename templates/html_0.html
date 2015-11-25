@@ -10,18 +10,18 @@
   <body>
     <script type="text/javascript">
       var _d = {
-        "tpType": "{{ materail['type'] }}",//模板类型 img/flash/mv
-        "mUrl": "{{ materail['murl'] }}",//物料地址
-        "cu": "{{ materail['click_url'] }}",//点击地址
-        "su": "{{ materail['imp_url'] }}",//曝光地址
-        "cmu": "{{ materail['cm_url'] }}",//cookie mapping地址
-        "s3u": "{{ materail['th_url'] }}",//第三方曝光地址
-        "w": "{{ materail['width'] }}",//宽度
-        "h": "{{ materail['height'] }}",//高度
-        "lImg": "http://material.istreamsche.com/logo/a_2.png",//角标图地址
-        "lhImg": " http://material.istreamsche.com/logo/b_2.png",//hover状态角标图地址
+        "tpType": "{{ materail['m_type'] }}",//img/flash/mv
+        "mUrl": "{{ materail['m_url'] }}",
+        "cu": "{{ materail['click_url'] }}",
+        "su": "{{ materail['imp_url'] }}",
+        "cmu": "{{ materail['cm_url'] }}",
+        "s3u": "{{ materail['monitor_url'] }}",
+        "w": "{{ materail['m_width'] }}",
+        "h": "{{ materail['m_height'] }}",
+        "lImg": "http://material.istreamsche.com/logo/a_2.png",
+        "lhImg": " http://material.istreamsche.com/logo/b_2.png",
         "lpst": "rb",
-        "lUrl": "http://aitou.geotmt.com/un/reg/form"//角标目标地址
+        "lUrl": "http://aitou.geotmt.com/un/reg/form"
       };
       aittp.adHandler(_d);
     </script>
