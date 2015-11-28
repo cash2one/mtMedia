@@ -46,6 +46,7 @@ class CoreHttpHandler(tornado.web.RequestHandler):
         self.broker = broker
         self.cookiehandler = CookieHanlder(broker)
         self.ob_dist = broker.dist
+        self.ob_requester = broker.requester
 
     def prepare(self):
         self.set_header('P3P','CP="CURa ADMa DEVa PSAo PSDo OUR BUS UNI PUR INT DEM STA PRE COM NAV OTC NOI DSP COR"')
@@ -110,7 +111,8 @@ class CoreHttpHandler(tornado.web.RequestHandler):
             self.getIp()
             self.dealCookie()
             self.recordReq()
-            self.res = yield self.ob_dist.dist(self.dic)
+            #self.res = yield self.ob_dist.dist(self.dic)
+            self.res = yield self.ob_requester.getAdReturn(self.dic)
             self.customResult()
             return
         except Exception, e:

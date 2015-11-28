@@ -7,6 +7,7 @@ from jinja2 import Environment, PackageLoader
 env = Environment(loader=PackageLoader('adrender','templates'))
 
 MONITOR_HOST = "http://123.56.16.39"
+#MONITOR_HOST = "http://click.mtty.com"
 IMP_MONITOR_PATH = "/mt/show?"
 CLICK_MONITOR_PATH = "/mt/click?"
 IMP_MONITOR_ERROR = "/s_err.gif?"
@@ -19,7 +20,7 @@ def generate_imp_url(req_dic, res_dic):
 		para['aid'] = res_dic['aid'] if res_dic.has_key('aid') else ''
 		para['pid'] = res_dic['pid'] if res_dic.has_key('pid') else ''
 		para['cid'] = res_dic['cid'] if res_dic.has_key('cid') else ''
-		para['area'] = res_dic['eid'] if res_dic.has_key('eid') else ''
+		para['area'] = res_dic['area'] if res_dic.has_key('area') else ''
 		para['rid'] = res_dic['rid'] if res_dic.has_key('rid') else ''
 		para['t'] = req_dic['t']
 		para = urlencode(para)
@@ -35,7 +36,7 @@ def generate_click_url(req_dic, res_dic):
 		para['aid'] = res_dic['aid'] if res_dic.has_key('aid') else ''
 		para['pid'] = res_dic['pid'] if res_dic.has_key('pid') else ''
 		para['cid'] = res_dic['cid'] if res_dic.has_key('cid') else ''
-		para['area'] = res_dic['eid'] if res_dic.has_key('eid') else ''
+		para['area'] = res_dic['area'] if res_dic.has_key('area') else ''
 		para['rid'] = res_dic['rid'] if res_dic.has_key('rid') else ''
 		para['t'] = req_dic['t']
 		para['url'] = res_dic['click_url'] if res_dic.has_key('click_url') else ''

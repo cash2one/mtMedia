@@ -15,6 +15,7 @@ class Database(object):
         self.red_list = list()
         self.m_redis_conf = redis_conf
         self.hour = lambda : str(datetime.now().hour).zfill(2)
+        self.today = lambda : "%s-%s-%s" % (datetime.now().year, datetime.now().month, datetime.now().day)
         self.initDatabase()
 
     def initDatabase(self):
@@ -60,6 +61,18 @@ class Database(object):
                 self.red._expireat(key, self.expiretime())
         except Exception,e:
             print e
+
+    def incPidRequest(self, pid, num):
+        try:
+            if pid :
+                self.switch()
+                today = self.today()
+                hour = self.hour()
+                key = "pid:request:%s:%s" % (today, pid)
+                self.red._hincrby(key, hour, num)
+        except Exception,e:
+            print e
+
 
     def incPidPv(self, pid, eid):
         try:

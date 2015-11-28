@@ -37,7 +37,7 @@ class CounterCache(threading.Thread):
         self.m_Cache_A = defaultdict()
         self.m_Cache_B = defaultdict()
 
-        self.database = Database()
+        self.database = Database(redis_conf = REDISEVER)
 
         self.cacheInit(self.m_Cache_A)
         self.cacheInit(self.m_Cache_B)
@@ -63,7 +63,7 @@ class CounterCache(threading.Thread):
             self.cacheInit(self.m_Cache_A)
 
     def cacheInit(self, cache):
-        cache['pid_info'] = defaultdict(int)
+        cache['pid_info'] = { 'request':defaultdict(int), 'response':defaultdict(int) }
 
     @tornado.gen.coroutine
     def queueMsgPut(self, msg):
@@ -74,9 +74,18 @@ class CounterCache(threading.Thread):
         while True:
             msg = yield self.m_queue.get()
             #print msg
-            cache = self.switchCache()
             # put
-    
+            self.cacheInfoPut(msg)
+
+    def cacheInfoPut(self, msg):
+        cache = self.switchCache()
+        #print msg
+        if msg.has_key('pid'):
+            pid = msg['pid']
+            cache['pid_info']['request'][pid] = cache['pid_info']['request'][pid] + 1
+            #print cache
+
+
     def cacheDura(self):
         cache = None
         if self.m_CacheFlag == 1:
@@ -85,9 +94,11 @@ class CounterCache(threading.Thread):
             cache = self.m_Cache_A
 
         #loginfo(cache)
-
         if cache.has_key('pid_info'):
-            pass
+            for pid in cache['pid_info']['request'].iterkeys():
+                self.database.incPidRequest(pid, cache['pid_info']['request'][pid])
+            #for pid in cache['pid_info']['request'].iterkeys():
+            #    self.database.incPidRequest(pid, cache['pid_info']['request'][pid])
 
         if cache.has_key('aid_info'):
             for aid in cache['aid_info']['exchange_price'].iterkeys():

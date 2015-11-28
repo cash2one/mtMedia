@@ -9,6 +9,9 @@ from settings import DISTRIBUTOR_TIME
 from utils.general import SOCK
 from requests.exceptions import *
 
+#ADSERVER = "http://show.mtty.com/tbid"
+ADSERVER = "http://123.56.16.39/tbid"
+
 def resultparser(dic, res):
     res_dic = json.loads(res)
     if dic.has_key('rid') and res_dic.has_key('rid'):
@@ -29,13 +32,18 @@ class Requester():
     @gen.coroutine
     def getAdReturn(self, dic):
         try:
-            res = self.session.post("http://127.0.0.1:8899/tbid", json = dic, timeout=0.05)
+            #print dic
+            res = self.session.post(ADSERVER, json = dic, timeout=0.5)
             #print dir(res)
             raise gen.Return()
         except gen.Return as res_info:
             if res.status_code == requests.codes.ok:
+                #print res.content
                 return resultparser(dic, res.content)
-            pass
+            elif res.status_code == requests.codes.no_content:
+                print 'No Content.Empty Response...'
+            else:
+                print 'Error Response Code: %s' % str(res.status_code)
         except requests.exceptions.ConnectTimeout:
             print 'getAdReturn ConnectTimeout!'
         except requests.exceptions.Timeout:
