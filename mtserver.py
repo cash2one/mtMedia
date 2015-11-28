@@ -16,9 +16,10 @@ import tornado.httpserver
 import tornado.web
 from utils.log import init_syslog, logimpr, logclick, dbg, logwarn, logerr, _lvl
 import base64
-from handlers.coretttphander import *
+from handlers.corehandler import *
+from handlers.clickhandler import *
 from scheduler.countercache import *
-from scheduler.distributor import Distributor
+from scheduler.distributor import Distributor, Requester
 from settings import *
 from tornado.ioloop import  IOLoop
 
@@ -50,6 +51,7 @@ class Application(tornado.web.Application):
     def __init__(self, broker):
         handlers = [
             (r'/mt/media',CoreHttpHandler, dict(broker = broker)),
+            (r'/mt/click',ClickHandler, dict(broker = broker)),
             (r'/mt/mt.gif*',CoreHttpHandler, dict(broker = broker)),
             (r'/(.*)',DefaultHandler)
         ]
@@ -89,6 +91,7 @@ class Broker(object):
         self.server_port = None
         self.countercache = CounterCache()
         self.dist = Distributor()
+        self.requester = Requester()
 
     def daemonize(self):
         pid = os.fork()

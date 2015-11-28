@@ -2,10 +2,46 @@
 
 import json
 import socket
+import requests
 from tornado import gen
 from settings import DISTRIBUTOR_SERVER
 from settings import DISTRIBUTOR_TIME
 from utils.general import SOCK
+from requests.exceptions import *
+
+def resultparser(dic, res):
+    res_dic = json.loads(res)
+    if dic.has_key('rid') and res_dic.has_key('rid'):
+        if dic['rid'] == res_dic['rid']:
+            pass
+        else:
+            print "RequestID check Error!"
+            return None
+    else:
+        pass
+    #print res_dic
+    return res_dic
+
+class Requester():
+    def __init__(self):
+      self.session = requests.Session()
+
+    @gen.coroutine
+    def getAdReturn(self, dic):
+        try:
+            res = self.session.post("http://127.0.0.1:8899/tbid", json = dic, timeout=0.05)
+            #print dir(res)
+            raise gen.Return()
+        except gen.Return as res_info:
+            if res.status_code == requests.codes.ok:
+                return resultparser(dic, res.content)
+            pass
+        except requests.exceptions.ConnectTimeout:
+            print 'getAdReturn ConnectTimeout!'
+        except requests.exceptions.Timeout:
+            print 'getAdReturn Timeout!'
+        except Exception, e:
+            print 'getAdReturn:%s' % e
 
 class Distributor():
     def __init__(self):
@@ -24,17 +60,6 @@ class Distributor():
             self.counter = 0
         return self.m_server_list[self.counter]
 
-    def resultparser(self, dic, res):
-        res_dic = json.loads(res)
-        if dic.has_key('rid') and res_dic.has_key('rid'):
-            if dic['rid'] == res_dic['rid']:
-                pass
-            else:
-                print "RequestID check Error!"
-                return None
-        else:
-            pass
-        return res_dic
 
     @gen.coroutine
     def dist(self, dic):
@@ -53,7 +78,7 @@ class Distributor():
                     raise gen.Return()
                 except gen.Return as res_info:
                     s.close()
-                    return self.resultparser(dic, re[0])# info
+                    return resultparser(dic, re[0])# info
                 except socket.timeout:
                     s.close()
                     print 'timeout:%s' % str(dis_server)
