@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 from urllib import urlencode
 from collections import defaultdict
