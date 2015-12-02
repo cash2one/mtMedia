@@ -10,9 +10,9 @@ try:
 except ImportError:
   from StringIO import StringIO
 
-from kafka.client import KafkaClient
-from kafka.producer import Producer
 import kafka
+from kafka.client import KafkaClient
+from kafka.producer import SimpleProducer as Producer
 #print kafka.__version__
 import time
 import json
@@ -27,11 +27,14 @@ class KafkaCon():
         self.msg_stat_server  = settings.MSG_SERVER
         self.part_num = settings.PART_NUM
         self.part_counter = 0
+        self._initConnect()
+
+    def _initConnect(self):
         if settings.SENDMSG:    
             self.stat_con = KafkaClient(self.msg_stat_server[0] +':' + str(self.msg_stat_server[1])) 
-            show_producer = Producer(self.stat_con,  async=True)
-            click_producer = Producer(self.stat_con, async=True)
-            action_producer = Producer(self.stat_con,  async=True)
+            show_producer = Producer(self.stat_con,  async=False)
+            click_producer = Producer(self.stat_con, async=False)
+            action_producer = Producer(self.stat_con,  async=False)
 
             self.stat = {
                          settings.T_IMP:show_producer,
@@ -52,9 +55,18 @@ class KafkaCon():
                 if isinstance(content,dict):
                     partion = self._getPartion()
                     self.part_counter = self.part_counter + 1
-                    self.stat[topic].send_messages(topic, partion, json.dumps(content))   
+                    self.stat[topic].send_messages(topic, json.dumps(content).encode('utf-8'))   
                     logger.debug('Send Msg to Kafka ok!')
                     return True
+
+            except kafka.common.FailedPayloadsError:
+                    logger.warn("FailedPayloadsError")
+                    self._initConnect()
+
+            except kafka.common.ConnectionError:
+                    logger.warn("ConnectionError")
+                    self._initConnect()
+
             except Exception, e:
                     logger.error('Send Msg to Kafka Err:%s' % e)
         else:
