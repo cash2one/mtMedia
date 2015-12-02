@@ -127,7 +127,7 @@ class CoreHttpHandler(tornado.web.RequestHandler):
             #self.res = yield self.ob_dist.dist(self.dic)
             self.res = yield self.ob_requester.getAdReturn(self.dic)
             self.customResult()
-			logger.info("---------------------------------------------")
+            logger.info("---------------------------------------------")
             return
         except Exception, e:
             logger.error(e)
