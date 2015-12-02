@@ -15,7 +15,7 @@ class Database(object):
         self.red_list = list()
         self.m_redis_conf = redis_conf
         self.hour = lambda : str(datetime.now().hour).zfill(2)
-        self.today = lambda : "%s-%s-%s" % (datetime.now().year, datetime.now().month, datetime.now().day)
+        self.today = lambda : "%d-%2d-%02d" % (datetime.now().year, datetime.now().month, datetime.now().day)
         self.initDatabase()
 
     def initDatabase(self):
