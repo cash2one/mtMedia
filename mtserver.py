@@ -10,18 +10,21 @@
 #
 ###################################################
 
-import random, time, os, sys, socket
-import tornado.ioloop
-import tornado.httpserver
-import tornado.web
-from utils.log import init_syslog, logimpr, logclick, dbg, logwarn, logerr, _lvl
+import yaml
 import base64
+import tornado.web
+import tornado.ioloop
+import logging.config
+from settings import *
+import tornado.httpserver
+import random, time, os, sys, socket
 from handlers.corehandler import *
 from handlers.clickhandler import *
 from scheduler.countercache import *
 from scheduler.distributor import Distributor, Requester
-from settings import *
 from tornado.ioloop import  IOLoop
+from utils.kfconnect import KafkaCon
+from utils.log import init_syslog, logimpr, logclick, dbg, logwarn, logerr, _lvl
 
 RESPONSE_BLANK = """(function(){})();"""
 REAL_IP = 'X-Real-Ip' # Need to config in nginx
@@ -92,6 +95,7 @@ class Broker(object):
         self.countercache = CounterCache()
         self.dist = Distributor()
         self.requester = Requester()
+        self.msg_server = KafkaCon()
 
     def daemonize(self):
         pid = os.fork()
@@ -165,6 +169,7 @@ if __name__ == '__main__':
         IOLoop.current().add_callback(broker.countercache.queueMsgGet)
         broker.countercache.start()
         broker.succ()
+        logging.config.dictConfig(yaml.load(open('logging.yaml', 'r')))
         http.loop()
     #except Exception, e:
     #    print e

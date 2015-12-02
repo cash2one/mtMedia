@@ -6,11 +6,14 @@ import requests
 from tornado import gen
 from settings import DISTRIBUTOR_SERVER
 from settings import DISTRIBUTOR_TIME
+from settings import AD_CORE_SERVER
 from utils.general import SOCK
 from requests.exceptions import *
 
-#ADSERVER = "http://show.mtty.com/tbid"
-ADSERVER = "http://123.56.16.39/tbid"
+import logging
+logger = logging.getLogger(__name__)
+
+ADSERVER = AD_CORE_SERVER
 
 def resultparser(dic, res):
     res_dic = json.loads(res)
@@ -33,23 +36,23 @@ class Requester():
     def getAdReturn(self, dic):
         try:
             #print dic
-            res = self.session.post(ADSERVER, json = dic, timeout=0.5)
+            res = self.session.post(ADSERVER, json = dic, timeout = float(DISTRIBUTOR_TIME)/1000)
             #print dir(res)
             raise gen.Return()
         except gen.Return as res_info:
             if res.status_code == requests.codes.ok:
-                #print res.content
+                logger.debug(res.content)
                 return resultparser(dic, res.content)
             elif res.status_code == requests.codes.no_content:
-                print 'No Content.Empty Response...'
+                logger.info('No Content.Empty Response...')
             else:
-                print 'Error Response Code: %s' % str(res.status_code)
+                logger.error('Error Response Code: %s' % str(res.status_code))
         except requests.exceptions.ConnectTimeout:
-            print 'getAdReturn ConnectTimeout!'
+            logger.warn('getAdReturn ConnectTimeout!')
         except requests.exceptions.Timeout:
-            print 'getAdReturn Timeout!'
+            logger.warn('getAdReturn Timeout!')
         except Exception, e:
-            print 'getAdReturn:%s' % e
+            logger.error('getAdReturn:%s' % e)
 
 class Distributor():
     def __init__(self):

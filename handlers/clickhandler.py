@@ -16,8 +16,11 @@ import tornado.httpserver
 from tornado.httpclient import *
 from handlers.cookiehandler import *
 import random, time, os, sys, socket
-from utils.log import init_syslog, logimpr, loginfo,logclick, dbg, logwarn, logerr, _lvl
 from collections import defaultdict
+from utils.general import INTER_MSG_CLICK
+
+import logging
+logger = logging.getLogger(__name__)
 
 IMG_FILE = open('./1x1.gif','r')
 try:
@@ -27,16 +30,6 @@ finally:
 
 REFERER = 'Referer'
 USER_AGENT = 'User-Agent'
-
-def urlsafe_b64encode(string):
-    encoded = base64.urlsafe_b64encode(string)
-    return encoded.replace( '=', '' )
-
-def urlsafe_b64decode(s):
-    mod4 = len(s) % 4
-    if mod4:
-        s += ((4 - mod4) * '=')
-    return base64.urlsafe_b64decode(str(s))
     
 
 class ClickHandler(tornado.web.RequestHandler):
@@ -56,6 +49,10 @@ class ClickHandler(tornado.web.RequestHandler):
         except Exception:
             pass
 
+    def recordClick():
+        self.broker.countercache.queueMsgPut( self.dic )
+        self.ob_msg_server.sendMsgToStat(T_CLK, self.dic)
+
     def dealCookie(self):
         try:
             # cookie identify
@@ -64,7 +61,7 @@ class ClickHandler(tornado.web.RequestHandler):
                 self.set_cookie("uc", self.ucookie, domain=DOMAIN, expires_days=uc_expires)
             else:
                 if not self.cookiehandler.checkCookie(self.ucookie):
-                    dbg("UserCookie:%s is illegal!" % self.ucookie)
+                    logger.error("UserCookie:%s is illegal!" % self.ucookie)
                     self.ucookie = self.cookiehandler.setCookie()
                     self.set_cookie("uc", self.ucookie, domain=DOMAIN, expires_days=uc_expires)
             self.dic['gmuid'] = self.ucookie          
@@ -75,20 +72,31 @@ class ClickHandler(tornado.web.RequestHandler):
         self.set_header('Content-Type', 'image/gif')
         self.write(IMG_DATA)
 
+    def dealRedirect(self):
+        if self.aurl:
+            logger.info("Url:%s" % self.aurl)
+            self.redirect(self.aurl)
+        else:
+            logger.info('No Url')
+        
+
     @tornado.web.asynchronous
     #@gen.engine
     @gen.coroutine
     def get(self):
         try:
-            dbg("-------------CORE HTTP HANDLER----------------")
+            logger.debug("-------------CORE CLICK HANDLER----------------")
             self.dic = defaultdict()
+            self.dic['type'] = INTER_MSG_CLICK
             self.dic['t'] = str( int(time.time()) )
             self.ucookie = self.get_cookie('uc')
-            aurl = self.get_argument("url", default = None)
+            self.aurl = self.get_argument("url", default = None)
             self.getIp()
             self.dealCookie()
-            self.redirect(aurl)
+            self.dealRedirect()
             #print aurl
+			logger.debug("-----------------------------------------------")
         except Exception, e:
+            self.dealRedirect()
             return
 

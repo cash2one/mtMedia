@@ -1,0 +1,605 @@
+2015-12-01 15:43:09,018 - handlers.corehandler - INFO - CORE HTTP HANDLER
+2015-12-01 15:43:09,027 - requests.packages.urllib3.connectionpool - INFO - Starting new HTTP connection (1): 123.56.16.39
+2015-12-01 15:43:09,058 - tornado.access - INFO - 200 GET /mt/media?pid=mm_10001328_4164206_13516084&w=300&h=250 (10.111.24.194) 41.28ms
+2015-12-01 15:43:09,163 - tornado.access - INFO - 200 GET /favicon.ico (10.111.24.194) 0.70ms
+2015-12-01 15:43:37,509 - handlers.corehandler - INFO - CORE HTTP HANDLER
+2015-12-01 15:43:37,526 - tornado.access - INFO - 200 GET /mt/media?pid=mm_10001328_4164206_13516084&w=300&h=250 (10.111.24.194) 17.45ms
+2015-12-01 15:43:37,613 - tornado.access - INFO - 200 GET /favicon.ico (10.111.24.194) 0.66ms
+2015-12-01 15:43:43,542 - handlers.corehandler - INFO - CORE HTTP HANDLER
+2015-12-01 15:43:43,559 - tornado.access - INFO - 200 GET /mt/media?pid=mm_10001328_4164206_13516084&w=300&h=250 (10.111.24.194) 18.33ms
+2015-12-01 15:43:43,646 - tornado.access - INFO - 200 GET /favicon.ico (10.111.24.194) 0.67ms
+2015-12-01 15:43:46,109 - handlers.corehandler - INFO - CORE HTTP HANDLER
+2015-12-01 15:43:46,127 - tornado.access - INFO - 200 GET /mt/media?pid=mm_10001328_4164206_13516084&w=300&h=250 (10.111.24.194) 17.92ms
+2015-12-01 15:43:46,223 - tornado.access - INFO - 200 GET /favicon.ico (10.111.24.194) 0.65ms
+2015-12-01 15:43:47,358 - handlers.corehandler - INFO - CORE HTTP HANDLER
+2015-12-01 15:43:47,376 - tornado.access - INFO - 200 GET /mt/media?pid=mm_10001328_4164206_13516084&w=300&h=250 (10.111.24.194) 18.55ms
+2015-12-01 15:43:47,527 - tornado.access - INFO - 200 GET /favicon.ico (10.111.24.194) 0.67ms
+2015-12-01 15:44:48,104 - handlers.corehandler - INFO - CORE HTTP HANDLER
+2015-12-01 15:44:48,108 - requests.packages.urllib3.connectionpool - INFO - Starting new HTTP connection (1): 123.56.16.39
+2015-12-01 15:44:48,138 - tornado.access - INFO - 200 GET /mt/media?pid=mm_10001328_4164206_13516084&w=300&h=250 (10.111.24.194) 34.72ms
+2015-12-01 15:44:48,257 - tornado.access - INFO - 200 GET /favicon.ico (10.111.24.194) 0.69ms
+2015-12-01 15:45:02,144 - handlers.corehandler - INFO - CORE HTTP HANDLER
+2015-12-01 15:45:02,160 - tornado.access - INFO - 200 GET /mt/media?pid=mm_10001328_4164206_13516084&w=300&h=250 (10.111.24.194) 17.06ms
+2015-12-01 15:45:02,331 - tornado.access - INFO - 200 GET /favicon.ico (10.111.24.194) 0.65ms
+2015-12-01 15:45:08,702 - handlers.corehandler - INFO - CORE HTTP HANDLER
+2015-12-01 15:45:08,717 - tornado.access - INFO - 200 GET /mt/media?pid=mm_10001328_4164206_13516084&w=300&h=250 (10.111.24.194) 16.30ms
+2015-12-01 15:45:09,061 - tornado.access - INFO - 200 GET /favicon.ico (10.111.24.194) 0.65ms
+2015-12-01 16:18:38,030 - handlers.corehandler - INFO - CORE HTTP HANDLER
+2015-12-01 16:18:38,033 - requests.packages.urllib3.connectionpool - INFO - Resetting dropped connection: 123.56.16.39
+2015-12-01 16:18:38,050 - tornado.access - INFO - 200 GET /mt/media?pid=mm_10001328_4164206_13516084&w=300&h=250 (10.111.24.194) 21.13ms
+2015-12-01 16:18:38,181 - tornado.access - INFO - 200 GET /favicon.ico (10.111.24.194) 0.68ms
+2015-12-01 16:18:39,392 - handlers.corehandler - INFO - CORE HTTP HANDLER
+2015-12-01 16:18:39,407 - tornado.access - INFO - 200 GET /mt/media?pid=mm_10001328_4164206_13516084&w=300&h=250 (10.111.24.194) 15.30ms
+2015-12-01 16:18:39,515 - tornado.access - INFO - 200 GET /favicon.ico (10.111.24.194) 0.69ms
+2015-12-01 16:18:40,248 - handlers.corehandler - INFO - CORE HTTP HANDLER
+2015-12-01 16:18:40,265 - tornado.access - INFO - 200 GET /mt/media?pid=mm_10001328_4164206_13516084&w=300&h=250 (10.111.24.194) 17.21ms
+2015-12-01 16:18:40,422 - tornado.access - INFO - 200 GET /favicon.ico (10.111.24.194) 0.69ms
+2015-12-01 16:18:41,001 - handlers.corehandler - INFO - CORE HTTP HANDLER
+2015-12-01 16:18:41,019 - tornado.access - INFO - 200 GET /mt/media?pid=mm_10001328_4164206_13516084&w=300&h=250 (10.111.24.194) 18.67ms
+2015-12-01 16:18:41,138 - tornado.access - INFO - 200 GET /favicon.ico (10.111.24.194) 0.68ms
+2015-12-01 18:44:58,013 - handlers.corehandler - INFO - CORE HTTP HANDLER
+2015-12-01 18:44:58,017 - requests.packages.urllib3.connectionpool - INFO - Resetting dropped connection: 123.56.16.39
+2015-12-01 18:44:58,035 - tornado.access - INFO - 200 GET /mt/media?pid=mm_10001328_4164206_13516084&w=300&h=250 (10.111.24.194) 22.30ms
+2015-12-01 18:44:58,193 - tornado.access - INFO - 200 GET /favicon.ico (10.111.24.194) 0.70ms
+2015-12-01 18:45:14,484 - handlers.corehandler - INFO - CORE HTTP HANDLER
+2015-12-01 18:45:14,501 - tornado.access - INFO - 200 GET /mt/media?pid=mm_10001328_4164206_13516084&w=300&h=250 (10.111.24.194) 17.59ms
+2015-12-01 18:45:14,632 - tornado.access - INFO - 200 GET /favicon.ico (10.111.24.194) 0.69ms
+2015-12-01 18:45:36,189 - handlers.corehandler - INFO - CORE HTTP HANDLER
+2015-12-01 18:45:36,205 - tornado.access - INFO - 200 GET /mt/media?pid=mm_10001328_4164206_13516084&w=300&h=250 (10.111.24.194) 16.88ms
+2015-12-01 18:45:36,296 - tornado.access - INFO - 200 GET /favicon.ico (10.111.24.194) 0.67ms
+2015-12-01 18:45:37,994 - handlers.corehandler - INFO - CORE HTTP HANDLER
+2015-12-01 18:45:38,008 - tornado.access - INFO - 200 GET /mt/media?pid=mm_10001328_4164206_13516084&w=300&h=250 (10.111.24.194) 14.42ms
+2015-12-01 18:45:38,073 - tornado.access - INFO - 200 GET /favicon.ico (10.111.24.194) 0.68ms
+2015-12-01 18:45:39,347 - handlers.corehandler - INFO - CORE HTTP HANDLER
+2015-12-01 18:45:39,364 - tornado.access - INFO - 200 GET /mt/media?pid=mm_10001328_4164206_13516084&w=300&h=250 (10.111.24.194) 17.23ms
+2015-12-01 18:45:39,447 - tornado.access - INFO - 200 GET /favicon.ico (10.111.24.194) 0.64ms
+2015-12-01 18:45:40,732 - handlers.corehandler - INFO - CORE HTTP HANDLER
+2015-12-01 18:45:40,746 - tornado.access - INFO - 200 GET /mt/media?pid=mm_10001328_4164206_13516084&w=300&h=250 (10.111.24.194) 14.46ms
+2015-12-01 18:45:40,869 - tornado.access - INFO - 200 GET /favicon.ico (10.111.24.194) 0.65ms
+2015-12-01 18:45:42,219 - handlers.corehandler - INFO - CORE HTTP HANDLER
+2015-12-01 18:45:42,236 - tornado.access - INFO - 200 GET /mt/media?pid=mm_10001328_4164206_13516084&w=300&h=250 (10.111.24.194) 17.35ms
+2015-12-01 18:45:42,304 - tornado.access - INFO - 200 GET /favicon.ico (10.111.24.194) 0.68ms
+2015-12-01 18:45:43,605 - handlers.corehandler - INFO - CORE HTTP HANDLER
+2015-12-01 18:45:43,623 - tornado.access - INFO - 200 GET /mt/media?pid=mm_10001328_4164206_13516084&w=300&h=250 (10.111.24.194) 17.64ms
+2015-12-01 18:45:43,736 - tornado.access - INFO - 200 GET /favicon.ico (10.111.24.194) 0.64ms
+2015-12-01 18:48:19,713 - handlers.corehandler - INFO - CORE HTTP HANDLER
+2015-12-01 18:48:19,723 - requests.packages.urllib3.connectionpool - INFO - Starting new HTTP connection (1): 123.56.16.39
+2015-12-01 18:48:19,749 - tornado.access - INFO - 200 GET /mt/media?pid=mm_10001328_4164206_13516084&w=300&h=250 (10.111.24.194) 37.54ms
+2015-12-01 18:48:19,836 - tornado.access - INFO - 200 GET /favicon.ico (10.111.24.194) 0.65ms
+2015-12-01 18:48:20,974 - handlers.corehandler - INFO - CORE HTTP HANDLER
+2015-12-01 18:48:20,988 - tornado.access - INFO - 200 GET /mt/media?pid=mm_10001328_4164206_13516084&w=300&h=250 (10.111.24.194) 14.98ms
+2015-12-01 18:48:21,049 - tornado.access - INFO - 200 GET /favicon.ico (10.111.24.194) 0.26ms
+2015-12-01 18:49:47,265 - handlers.corehandler - INFO - -------------CORE HTTP HANDLER----------------
+2015-12-01 18:49:47,274 - requests.packages.urllib3.connectionpool - INFO - Starting new HTTP connection (1): 123.56.16.39
+2015-12-01 18:49:47,307 - tornado.access - INFO - 200 GET /mt/media?pid=mm_10001328_4164206_13516084&w=300&h=250 (10.111.24.194) 42.97ms
+2015-12-01 18:49:47,413 - tornado.access - INFO - 200 GET /favicon.ico (10.111.24.194) 0.54ms
+2015-12-01 18:50:01,961 - handlers.corehandler - INFO - -------------CORE HTTP HANDLER----------------
+2015-12-01 18:50:01,978 - tornado.access - INFO - 200 GET /mt/media?pid=mm_10001328_4164206_13516084&w=300&h=250 (10.111.24.194) 17.42ms
+2015-12-01 18:50:02,097 - tornado.access - INFO - 200 GET /favicon.ico (10.111.24.194) 0.74ms
+2015-12-01 18:50:08,813 - handlers.corehandler - INFO - -------------CORE HTTP HANDLER----------------
+2015-12-01 18:50:08,828 - tornado.access - INFO - 200 GET /mt/media?pid=mm_10001328_4164206_13516084&w=300&h=250 (10.111.24.194) 16.01ms
+2015-12-01 18:50:08,989 - tornado.access - INFO - 200 GET /favicon.ico (10.111.24.194) 0.68ms
+2015-12-01 18:54:09,811 - handlers.corehandler - INFO - -------------CORE HTTP HANDLER----------------
+2015-12-01 18:54:09,812 - handlers.corehandler - INFO - ip:10.111.24.194
+2015-12-01 18:54:09,813 - handlers.corehandler - INFO - cookie:AMiv2FA27SaAMX25T6InlfNiiTXmkFBN
+2015-12-01 18:54:09,815 - tornado.application - ERROR - Uncaught exception GET /mt/media?pid=mm_10001328_4164206_13516084&w=300&h=250 (10.111.24.194)
+HTTPServerRequest(protocol='http', host='10.111.32.15:9001', method='GET', uri='/mt/media?pid=mm_10001328_4164206_13516084&w=300&h=250', version='HTTP/1.1', remote_ip='10.111.24.194', headers={'Accept-Language': 'zh-CN,zh;q=0.8', 'Accept-Encoding': 'gzip, deflate, sdch', 'Host': '10.111.32.15:9001', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.86 Safari/537.36', 'Connection': 'keep-alive', 'Ra-Ver': '3.0.7', 'Cache-Control': 'max-age=0', 'If-None-Match': '"76bc238c3fa845d86cf52b3bdee50384a501725b"', 'Ra-Sid': '7CCADB42-20140725-035944-294c8a-a62829', 'Upgrade-Insecure-Requests': '1'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1401, in _stack_context_handle_exception
+    raise_exc_info((type, value, traceback))
+  File "/usr/local/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/stack_context.py", line 314, in wrapped
+    ret = fn(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1613, in future_complete
+    f.result()
+  File "/usr/local/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/concurrent.py", line 232, in result
+    raise_exc_info(self._exc_info)
+  File "/usr/local/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/gen.py", line 282, in wrapper
+    yielded = next(result)
+  File "/root/wyj/mtMedia/handlers/corehandler.py", line 127, in get
+    self.customResult()
+  File "/root/wyj/mtMedia/handlers/corehandler.py", line 97, in customResult
+    if self.res is None:
+AttributeError: 'CoreHttpHandler' object has no attribute 'res'
+2015-12-01 18:54:09,817 - tornado.access - ERROR - 500 GET /mt/media?pid=mm_10001328_4164206_13516084&w=300&h=250 (10.111.24.194) 7.17ms
+2015-12-01 18:54:09,860 - tornado.access - INFO - 200 GET /favicon.ico (10.111.24.194) 1.22ms
+2015-12-01 18:54:22,016 - handlers.corehandler - INFO - -------------CORE HTTP HANDLER----------------
+2015-12-01 18:54:22,016 - handlers.corehandler - INFO - ip:10.111.24.194
+2015-12-01 18:54:22,017 - handlers.corehandler - INFO - cookie:p7iijvpX7E2miXjuurPHUf3RY1A4uuZn
+2015-12-01 18:54:22,018 - tornado.application - ERROR - Uncaught exception GET /mt/media?pid=mm_10001328_4164206_13516084&w=300&h=250 (10.111.24.194)
+HTTPServerRequest(protocol='http', host='10.111.32.15:9001', method='GET', uri='/mt/media?pid=mm_10001328_4164206_13516084&w=300&h=250', version='HTTP/1.1', remote_ip='10.111.24.194', headers={'Accept-Language': 'zh-CN,zh;q=0.8', 'Accept-Encoding': 'gzip, deflate, sdch', 'Host': '10.111.32.15:9001', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.86 Safari/537.36', 'Connection': 'keep-alive', 'Cache-Control': 'max-age=0', 'Ra-Ver': '3.0.7', 'Ra-Sid': '7CCADB42-20140725-035944-294c8a-a62829', 'Upgrade-Insecure-Requests': '1'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1401, in _stack_context_handle_exception
+    raise_exc_info((type, value, traceback))
+  File "/usr/local/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/stack_context.py", line 314, in wrapped
+    ret = fn(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1613, in future_complete
+    f.result()
+  File "/usr/local/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/concurrent.py", line 232, in result
+    raise_exc_info(self._exc_info)
+  File "/usr/local/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/gen.py", line 282, in wrapper
+    yielded = next(result)
+  File "/root/wyj/mtMedia/handlers/corehandler.py", line 127, in get
+    self.customResult()
+  File "/root/wyj/mtMedia/handlers/corehandler.py", line 97, in customResult
+    if self.res is None:
+AttributeError: 'CoreHttpHandler' object has no attribute 'res'
+2015-12-01 18:54:22,020 - tornado.access - ERROR - 500 GET /mt/media?pid=mm_10001328_4164206_13516084&w=300&h=250 (10.111.24.194) 4.68ms
+2015-12-01 18:54:22,072 - tornado.access - INFO - 200 GET /favicon.ico (10.111.24.194) 0.67ms
+2015-12-01 18:56:26,623 - handlers.corehandler - INFO - -------------CORE HTTP HANDLER----------------
+2015-12-01 18:56:26,624 - handlers.corehandler - INFO - ip:10.111.24.194
+2015-12-01 18:56:26,625 - handlers.corehandler - INFO - cookie:m7AHTjY2Yg2AY22uGrqntSOUvKv3CL6p
+2015-12-01 18:56:26,626 - utils.kfconnect - INFO - send msg to Kafka ok!
+2015-12-01 18:56:26,633 - requests.packages.urllib3.connectionpool - INFO - Starting new HTTP connection (1): 123.56.16.39
+2015-12-01 18:56:26,660 - tornado.access - INFO - 200 GET /mt/media?pid=mm_10001328_4164206_13516084&w=300&h=250 (10.111.24.194) 38.39ms
+2015-12-01 18:56:26,767 - tornado.access - INFO - 200 GET /favicon.ico (10.111.24.194) 0.29ms
+2015-12-01 18:56:59,578 - handlers.corehandler - INFO - -------------CORE HTTP HANDLER----------------
+2015-12-01 18:56:59,579 - handlers.corehandler - INFO - ip:10.111.24.194
+2015-12-01 18:56:59,580 - handlers.corehandler - INFO - cookie:ppYpfFmFpEapAjFGT6geskKiikiP5ADd
+2015-12-01 18:56:59,581 - utils.kfconnect - INFO - send msg to Kafka ok!
+2015-12-01 18:56:59,588 - requests.packages.urllib3.connectionpool - INFO - Starting new HTTP connection (1): 123.56.16.39
+2015-12-01 18:56:59,617 - tornado.access - INFO - 200 GET /mt/media?pid=mm_10001328_4164206_13516084&w=300&h=250 (10.111.24.194) 40.35ms
+2015-12-01 18:56:59,707 - tornado.access - INFO - 200 GET /favicon.ico (10.111.24.194) 0.29ms
+2015-12-01 18:57:07,970 - handlers.corehandler - INFO - -------------CORE HTTP HANDLER----------------
+2015-12-01 18:57:07,971 - handlers.corehandler - INFO - ip:10.111.24.194
+2015-12-01 18:57:07,972 - handlers.corehandler - INFO - cookie:pYiNIvAFMHvAia2Gu94Vx5f9acv15zll
+2015-12-01 18:57:07,972 - utils.kfconnect - INFO - send msg to Kafka ok!
+2015-12-01 18:57:07,988 - tornado.access - INFO - 200 GET /mt/media?pid=mm_10001328_4164206_13516084&w=300&h=250 (10.111.24.194) 18.86ms
+2015-12-01 18:57:08,123 - tornado.access - INFO - 200 GET /favicon.ico (10.111.24.194) 0.77ms
+2015-12-01 19:03:01,773 - handlers.corehandler - INFO - -------------CORE HTTP HANDLER----------------
+2015-12-01 19:03:01,779 - requests.packages.urllib3.connectionpool - INFO - Starting new HTTP connection (1): 123.56.16.39
+2015-12-01 19:03:01,807 - tornado.access - INFO - 200 GET /mt/media?pid=mm_10001328_4164206_13516084&w=300&h=250 (10.111.24.194) 35.39ms
+2015-12-01 19:03:01,927 - tornado.access - INFO - 200 GET /favicon.ico (10.111.24.194) 0.42ms
+2015-12-01 19:03:20,100 - handlers.corehandler - INFO - -------------CORE HTTP HANDLER----------------
+2015-12-01 19:03:20,117 - tornado.access - INFO - 200 GET /mt/media?pid=mm_10001328_4164206_13516084&w=300&h=250 (10.111.24.194) 17.04ms
+2015-12-01 19:03:20,242 - tornado.access - INFO - 200 GET /favicon.ico (10.111.24.194) 0.67ms
+2015-12-01 19:03:21,516 - handlers.corehandler - INFO - -------------CORE HTTP HANDLER----------------
+2015-12-01 19:03:21,532 - tornado.access - INFO - 200 GET /mt/media?pid=mm_10001328_4164206_13516084&w=300&h=250 (10.111.24.194) 16.66ms
+2015-12-01 19:03:21,603 - tornado.access - INFO - 200 GET /favicon.ico (10.111.24.194) 0.66ms
+2015-12-01 19:03:26,786 - handlers.corehandler - INFO - -------------CORE HTTP HANDLER----------------
+2015-12-01 19:03:26,801 - tornado.access - INFO - 200 GET /mt/media?pid=mm_10001328_4164206_13516084&w=300&h=250 (10.111.24.194) 15.78ms
+2015-12-01 19:03:26,922 - tornado.access - INFO - 200 GET /favicon.ico (10.111.24.194) 0.70ms
+2015-12-01 19:04:19,716 - handlers.corehandler - INFO - -------------CORE HTTP HANDLER----------------
+2015-12-01 19:04:19,722 - requests.packages.urllib3.connectionpool - INFO - Starting new HTTP connection (1): 123.56.16.39
+2015-12-01 19:04:19,749 - tornado.access - INFO - 200 GET /mt/media?pid=mm_10001328_4164206_13516084&w=300&h=250 (10.111.24.194) 34.29ms
+2015-12-01 19:04:19,864 - tornado.access - INFO - 200 GET /favicon.ico (10.111.24.194) 0.27ms
+2015-12-01 19:04:27,628 - handlers.corehandler - INFO - -------------CORE HTTP HANDLER----------------
+2015-12-01 19:04:27,645 - tornado.access - INFO - 200 GET /mt/media?pid=mm_10001328_4164206_13516084&w=300&h=250 (10.111.24.194) 17.51ms
+2015-12-01 19:04:27,706 - tornado.access - INFO - 200 GET /favicon.ico (10.111.24.194) 0.67ms
+2015-12-01 19:04:47,750 - handlers.corehandler - INFO - -------------CORE HTTP HANDLER----------------
+2015-12-01 19:04:47,750 - handlers.corehandler - DEBUG - ip:10.111.24.194
+2015-12-01 19:04:47,751 - handlers.corehandler - DEBUG - cookie:iAYUnF72ifXimvj5u9qnU6rOaCigD66R
+2015-12-01 19:04:47,752 - utils.kfconnect - DEBUG - settings.SENDMSG:False
+2015-12-01 19:04:47,757 - requests.packages.urllib3.connectionpool - INFO - Starting new HTTP connection (1): 123.56.16.39
+2015-12-01 19:04:47,776 - requests.packages.urllib3.connectionpool - DEBUG - "POST /tbid HTTP/1.1" 200 249
+2015-12-01 19:04:47,787 - tornado.access - INFO - 200 GET /mt/media?pid=mm_10001328_4164206_13516084&w=300&h=250 (10.111.24.194) 39.02ms
+2015-12-01 19:04:47,891 - tornado.access - INFO - 200 GET /favicon.ico (10.111.24.194) 0.54ms
+2015-12-01 19:05:15,246 - handlers.corehandler - INFO - -------------CORE HTTP HANDLER----------------
+2015-12-01 19:05:15,253 - requests.packages.urllib3.connectionpool - INFO - Starting new HTTP connection (1): 123.56.16.39
+2015-12-01 19:05:15,278 - tornado.access - INFO - 200 GET /mt/media?pid=mm_10001328_4164206_13516084&w=300&h=250 (10.111.24.194) 32.85ms
+2015-12-01 19:05:15,379 - tornado.access - INFO - 200 GET /favicon.ico (10.111.24.194) 0.67ms
+2015-12-01 19:51:10,063 - handlers.corehandler - INFO - -------------CORE HTTP HANDLER----------------
+2015-12-01 19:51:10,066 - requests.packages.urllib3.connectionpool - INFO - Starting new HTTP connection (1): 123.56.16.39
+2015-12-01 19:51:10,095 - tornado.access - INFO - 200 GET /mt/media?pid=mm_10001328_4164206_13516084&w=300&h=250 (10.111.24.194) 32.58ms
+2015-12-01 19:51:10,095 - scheduler.countercache - INFO - QueueGet:defaultdict(None, {'ip': '10.111.24.194', 'pid': u'mm_10001328_4164206_13516084', 'ad_w': u'300', 'ad_h': u'250', 't': '1448970670', 'rid': 'd04bc6f4-9821-11e5-94f0-d43d7e09c946', 'gmuid': 'YYiNvvpjiLXm72vkG6Isi3Uiirp4TaN6', 'type': 1})
+2015-12-01 19:51:10,256 - tornado.access - INFO - 200 GET /favicon.ico (10.111.24.194) 0.71ms
+2015-12-01 19:51:25,764 - handlers.corehandler - INFO - -------------CORE HTTP HANDLER----------------
+2015-12-01 19:51:25,782 - tornado.access - INFO - 200 GET /mt/media?pid=mm_10001328_4164206_13516084&w=300&h=250 (10.111.24.194) 18.38ms
+2015-12-01 19:51:25,782 - scheduler.countercache - INFO - QueueGet:defaultdict(None, {'ip': '10.111.24.194', 'pid': u'mm_10001328_4164206_13516084', 'ad_w': u'300', 'ad_h': u'250', 't': '1448970685', 'rid': 'd9a789d6-9821-11e5-94f0-d43d7e09c946', 'gmuid': 'im7ArFp270jmmaFk59gsmVOcjmjEkhJm', 'type': 1})
+2015-12-01 19:51:25,862 - tornado.access - INFO - 200 GET /favicon.ico (10.111.24.194) 0.68ms
+2015-12-01 19:51:39,292 - handlers.corehandler - INFO - -------------CORE HTTP HANDLER----------------
+2015-12-01 19:51:39,309 - tornado.access - INFO - 200 GET /mt/media?pid=mm_10001328_4164206_13516084&w=300&h=250 (10.111.24.194) 17.49ms
+2015-12-01 19:51:39,310 - scheduler.countercache - INFO - QueueGet:defaultdict(None, {'ip': '10.111.24.194', 'pid': u'mm_10001328_4164206_13516084', 'ad_w': u'300', 'ad_h': u'250', 't': '1448970699', 'rid': 'e1b7d37e-9821-11e5-94f0-d43d7e09c946', 'gmuid': '7imvCXYv7KaYijvuWrqt7nPyY6AyDfVg', 'type': 1})
+2015-12-01 19:51:39,381 - tornado.access - INFO - 200 GET /favicon.ico (10.111.24.194) 0.66ms
+2015-12-02 15:27:19,116 - handlers.corehandler - INFO - -------------CORE HTTP HANDLER----------------
+2015-12-02 15:27:19,122 - requests.packages.urllib3.connectionpool - INFO - Starting new HTTP connection (1): 123.56.16.39
+2015-12-02 15:27:19,149 - tornado.access - INFO - 200 GET /mt/media?pid=mm_10001328_4164206_13516084&w=300&h=250 (10.111.24.194) 34.49ms
+2015-12-02 15:27:19,149 - scheduler.countercache - INFO - QueueGet:defaultdict(None, {'ip': '10.111.24.194', 'pid': u'mm_10001328_4164206_13516084', 'ad_w': u'300', 'ad_h': u'250', 't': '1449041239', 'rid': '1ebab76a-98c6-11e5-9e5e-d43d7e09c946', 'gmuid': '7pArCvma7S2Mi22GT47TjR1PX0j71R0s', 'type': 1})
+2015-12-02 15:27:23,025 - tornado.access - INFO - 200 GET /favicon.ico (10.111.24.194) 0.78ms
+2015-12-02 15:28:38,787 - handlers.corehandler - INFO - -------------CORE HTTP HANDLER----------------
+2015-12-02 15:28:38,793 - requests.packages.urllib3.connectionpool - INFO - Starting new HTTP connection (1): 123.56.16.39
+2015-12-02 15:28:38,814 - scheduler.countercache - INFO - QueueGet:defaultdict(None, {'ip': '10.111.24.194', 'pid': u'mm_10001328_4164206_13516084', 'ad_w': u'300', 'ad_h': u'250', 't': '1449041318', 'rid': '4e378aea-98c6-11e5-9114-d43d7e09c946', 'gmuid': 'AMpPm2YF2mvYM2v55gYW28Fyaj76oF0p', 'type': 1})
+2015-12-02 15:28:38,814 - tornado.application - ERROR - Uncaught exception GET /mt/media?pid=mm_10001328_4164206_13516084&w=300&h=250 (10.111.24.194)
+HTTPServerRequest(protocol='http', host='10.111.32.15:9001', method='GET', uri='/mt/media?pid=mm_10001328_4164206_13516084&w=300&h=250', version='HTTP/1.1', remote_ip='10.111.24.194', headers={'Accept-Language': 'zh-CN,zh;q=0.8', 'Accept-Encoding': 'gzip, deflate, sdch', 'Host': '10.111.32.15:9001', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.86 Safari/537.36', 'Connection': 'keep-alive', 'Ra-Ver': '3.0.7', 'Cache-Control': 'max-age=0', 'If-None-Match': '"1b7dec4e8abb31c7fa140f2aefb157944fcfed58"', 'Ra-Sid': '7CCADB42-20140725-035944-294c8a-a62829', 'Upgrade-Insecure-Requests': '1'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1401, in _stack_context_handle_exception
+    raise_exc_info((type, value, traceback))
+  File "/usr/local/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/stack_context.py", line 314, in wrapped
+    ret = fn(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1613, in future_complete
+    f.result()
+  File "/usr/local/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/concurrent.py", line 232, in result
+    raise_exc_info(self._exc_info)
+  File "/usr/local/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/gen.py", line 1017, in run
+    yielded = self.gen.send(value)
+  File "/root/wyj/mtMedia/handlers/corehandler.py", line 132, in get
+    self.customResult()
+  File "/root/wyj/mtMedia/handlers/corehandler.py", line 104, in customResult
+    back = creatAdJsonBack(self.dic, self.res)
+NameError: global name 'creatAdJsonBack' is not defined
+2015-12-02 15:28:38,815 - tornado.access - ERROR - 500 GET /mt/media?pid=mm_10001328_4164206_13516084&w=300&h=250 (10.111.24.194) 29.58ms
+2015-12-02 15:28:39,096 - tornado.access - INFO - 304 GET /favicon.ico (10.111.24.194) 1.17ms
+2015-12-02 15:29:02,875 - handlers.corehandler - INFO - -------------CORE HTTP HANDLER----------------
+2015-12-02 15:29:02,881 - requests.packages.urllib3.connectionpool - INFO - Starting new HTTP connection (1): 123.56.16.39
+2015-12-02 15:29:02,904 - tornado.access - INFO - 200 GET /mt/media?pid=mm_10001328_4164206_13516084&w=300&h=250 (10.111.24.194) 30.76ms
+2015-12-02 15:29:02,905 - scheduler.countercache - INFO - QueueGet:defaultdict(None, {'ip': '10.111.24.194', 'pid': u'mm_10001328_4164206_13516084', 'ad_w': u'300', 'ad_h': u'250', 't': '1449041342', 'rid': '5c931622-98c6-11e5-84fe-d43d7e09c946', 'gmuid': 'm7i8RapjMb2mYa2T5IYuXwW1ms74K6T5', 'type': 1})
+2015-12-02 15:29:03,206 - tornado.access - INFO - 304 GET /favicon.ico (10.111.24.194) 0.72ms
+2015-12-02 15:29:41,213 - handlers.corehandler - INFO - -------------CORE HTTP HANDLER----------------
+2015-12-02 15:29:41,237 - scheduler.countercache - INFO - QueueGet:defaultdict(None, {'ip': '10.111.24.194', 'pid': u'1017955', 'ad_w': '0', 'ad_h': '0', 't': '1449041381', 'rid': '736d03da-98c6-11e5-84fe-d43d7e09c946', 'gmuid': '7A7Q6X7Xi22MmX2kkg75jwha2Qp9oiZ1', 'type': 1})
+2015-12-02 15:29:41,237 - tornado.application - ERROR - Uncaught exception GET /mt/media?pid=1017955&callback=jsonp_callback_70297595 (10.111.24.194)
+HTTPServerRequest(protocol='http', host='10.111.32.15:9001', method='GET', uri='/mt/media?pid=1017955&callback=jsonp_callback_70297595', version='HTTP/1.1', remote_ip='10.111.24.194', headers={'Accept-Language': 'zh-CN,zh;q=0.8', 'Accept-Encoding': 'gzip, deflate, sdch', 'Host': '10.111.32.15:9001', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.86 Safari/537.36', 'Connection': 'keep-alive', 'Ra-Ver': '3.0.7', 'Ra-Sid': '7CCADB42-20140725-035944-294c8a-a62829', 'Upgrade-Insecure-Requests': '1'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1401, in _stack_context_handle_exception
+    raise_exc_info((type, value, traceback))
+  File "/usr/local/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/stack_context.py", line 314, in wrapped
+    ret = fn(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1613, in future_complete
+    f.result()
+  File "/usr/local/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/concurrent.py", line 232, in result
+    raise_exc_info(self._exc_info)
+  File "/usr/local/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/gen.py", line 1017, in run
+    yielded = self.gen.send(value)
+  File "/root/wyj/mtMedia/handlers/corehandler.py", line 132, in get
+    self.customResult()
+  File "/root/wyj/mtMedia/handlers/corehandler.py", line 105, in customResult
+    self.write(back)
+UnboundLocalError: local variable 'back' referenced before assignment
+2015-12-02 15:29:41,238 - tornado.access - ERROR - 500 GET /mt/media?pid=1017955&callback=jsonp_callback_70297595 (10.111.24.194) 25.81ms
+2015-12-02 15:29:41,430 - tornado.access - INFO - 304 GET /favicon.ico (10.111.24.194) 0.71ms
+2015-12-02 15:31:08,363 - handlers.corehandler - INFO - -------------CORE HTTP HANDLER----------------
+2015-12-02 15:31:08,369 - requests.packages.urllib3.connectionpool - INFO - Starting new HTTP connection (1): 123.56.16.39
+2015-12-02 15:31:08,397 - scheduler.countercache - INFO - QueueGet:defaultdict(None, {'ip': '10.111.24.194', 'pid': u'1017955', 'ad_w': '0', 'callback_id': u'jsonp_callback_70297595', 'ad_h': '0', 't': '1449041468', 'rid': 'a75f0a4e-98c6-11e5-bb6f-d43d7e09c946', 'gmuid': 'pYpvYFMvp4vA72F5WPAT2WV9M1X31nCN', 'type': 1})
+2015-12-02 15:31:08,397 - tornado.application - ERROR - Uncaught exception GET /mt/media?pid=1017955&callback=jsonp_callback_70297595 (10.111.24.194)
+HTTPServerRequest(protocol='http', host='10.111.32.15:9001', method='GET', uri='/mt/media?pid=1017955&callback=jsonp_callback_70297595', version='HTTP/1.1', remote_ip='10.111.24.194', headers={'Accept-Language': 'zh-CN,zh;q=0.8', 'Accept-Encoding': 'gzip, deflate, sdch', 'Host': '10.111.32.15:9001', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.86 Safari/537.36', 'Connection': 'keep-alive', 'Cache-Control': 'max-age=0', 'Ra-Ver': '3.0.7', 'Ra-Sid': '7CCADB42-20140725-035944-294c8a-a62829', 'Upgrade-Insecure-Requests': '1'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1401, in _stack_context_handle_exception
+    raise_exc_info((type, value, traceback))
+  File "/usr/local/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/stack_context.py", line 314, in wrapped
+    ret = fn(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1613, in future_complete
+    f.result()
+  File "/usr/local/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/concurrent.py", line 232, in result
+    raise_exc_info(self._exc_info)
+  File "/usr/local/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/gen.py", line 1017, in run
+    yielded = self.gen.send(value)
+  File "/root/wyj/mtMedia/handlers/corehandler.py", line 133, in get
+    self.customResult()
+  File "/root/wyj/mtMedia/handlers/corehandler.py", line 105, in customResult
+    self.write(back)
+UnboundLocalError: local variable 'back' referenced before assignment
+2015-12-02 15:31:08,398 - tornado.access - ERROR - 500 GET /mt/media?pid=1017955&callback=jsonp_callback_70297595 (10.111.24.194) 36.20ms
+2015-12-02 15:31:08,619 - tornado.access - INFO - 304 GET /favicon.ico (10.111.24.194) 1.25ms
+2015-12-02 15:31:59,579 - handlers.corehandler - INFO - -------------CORE HTTP HANDLER----------------
+2015-12-02 15:31:59,584 - requests.packages.urllib3.connectionpool - INFO - Starting new HTTP connection (1): 123.56.16.39
+2015-12-02 15:31:59,607 - scheduler.countercache - INFO - QueueGet:defaultdict(None, {'ip': '10.111.24.194', 'pid': u'1017955', 'ad_w': '0', 'callback_id': u'jsonp_callback_70297595', 'ad_h': '0', 't': '1449041519', 'rid': 'c5e5f928-98c6-11e5-99bd-d43d7e09c946', 'gmuid': 'm7i5YXMFMj2YiFjkTyA5jCEY7VmrR01I', 'type': 1})
+2015-12-02 15:31:59,608 - tornado.application - ERROR - Uncaught exception GET /mt/media?pid=1017955&callback=jsonp_callback_70297595 (10.111.24.194)
+HTTPServerRequest(protocol='http', host='10.111.32.15:9001', method='GET', uri='/mt/media?pid=1017955&callback=jsonp_callback_70297595', version='HTTP/1.1', remote_ip='10.111.24.194', headers={'Accept-Language': 'zh-CN,zh;q=0.8', 'Accept-Encoding': 'gzip, deflate, sdch', 'Host': '10.111.32.15:9001', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.86 Safari/537.36', 'Connection': 'keep-alive', 'Cache-Control': 'max-age=0', 'Ra-Ver': '3.0.7', 'Ra-Sid': '7CCADB42-20140725-035944-294c8a-a62829', 'Upgrade-Insecure-Requests': '1'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1401, in _stack_context_handle_exception
+    raise_exc_info((type, value, traceback))
+  File "/usr/local/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/stack_context.py", line 314, in wrapped
+    ret = fn(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1613, in future_complete
+    f.result()
+  File "/usr/local/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/concurrent.py", line 232, in result
+    raise_exc_info(self._exc_info)
+  File "/usr/local/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/gen.py", line 1017, in run
+    yielded = self.gen.send(value)
+  File "/root/wyj/mtMedia/handlers/corehandler.py", line 133, in get
+    self.customResult()
+  File "/root/wyj/mtMedia/handlers/corehandler.py", line 105, in customResult
+    self.write(back)
+UnboundLocalError: local variable 'back' referenced before assignment
+2015-12-02 15:31:59,609 - tornado.access - ERROR - 500 GET /mt/media?pid=1017955&callback=jsonp_callback_70297595 (10.111.24.194) 30.98ms
+2015-12-02 15:31:59,775 - tornado.access - INFO - 304 GET /favicon.ico (10.111.24.194) 0.49ms
+2015-12-02 15:33:19,029 - handlers.corehandler - INFO - -------------CORE HTTP HANDLER----------------
+2015-12-02 15:33:19,035 - requests.packages.urllib3.connectionpool - INFO - Starting new HTTP connection (1): 123.56.16.39
+2015-12-02 15:33:19,058 - scheduler.countercache - INFO - QueueGet:defaultdict(None, {'ip': '10.111.24.194', 'pid': u'1017955', 'ad_w': '300', 'callback_id': u'jsonp_callback_70297595', 'ad_h': '250', 't': '1449041599', 'rid': 'f541262a-98c6-11e5-a6df-d43d7e09c946', 'gmuid': 'Mp7ylai271vYAXau5gpuvBy42OvmTFHy', 'type': 1})
+2015-12-02 15:33:19,058 - tornado.application - ERROR - Uncaught exception GET /mt/media?pid=1017955&callback=jsonp_callback_70297595 (10.111.24.194)
+HTTPServerRequest(protocol='http', host='10.111.32.15:9001', method='GET', uri='/mt/media?pid=1017955&callback=jsonp_callback_70297595', version='HTTP/1.1', remote_ip='10.111.24.194', headers={'Accept-Language': 'zh-CN,zh;q=0.8', 'Accept-Encoding': 'gzip, deflate, sdch', 'Host': '10.111.32.15:9001', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.86 Safari/537.36', 'Connection': 'keep-alive', 'Cache-Control': 'max-age=0', 'Ra-Ver': '3.0.7', 'Ra-Sid': '7CCADB42-20140725-035944-294c8a-a62829', 'Upgrade-Insecure-Requests': '1'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1401, in _stack_context_handle_exception
+    raise_exc_info((type, value, traceback))
+  File "/usr/local/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/stack_context.py", line 314, in wrapped
+    ret = fn(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1613, in future_complete
+    f.result()
+  File "/usr/local/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/concurrent.py", line 232, in result
+    raise_exc_info(self._exc_info)
+  File "/usr/local/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/gen.py", line 1017, in run
+    yielded = self.gen.send(value)
+  File "/root/wyj/mtMedia/handlers/corehandler.py", line 133, in get
+    self.customResult()
+  File "/root/wyj/mtMedia/handlers/corehandler.py", line 105, in customResult
+    self.write(back)
+UnboundLocalError: local variable 'back' referenced before assignment
+2015-12-02 15:33:19,059 - tornado.access - ERROR - 500 GET /mt/media?pid=1017955&callback=jsonp_callback_70297595 (10.111.24.194) 31.07ms
+2015-12-02 15:33:19,357 - tornado.access - INFO - 304 GET /favicon.ico (10.111.24.194) 1.20ms
+2015-12-02 15:33:49,658 - handlers.corehandler - INFO - -------------CORE HTTP HANDLER----------------
+2015-12-02 15:33:49,664 - requests.packages.urllib3.connectionpool - INFO - Starting new HTTP connection (1): 123.56.16.39
+2015-12-02 15:33:49,688 - scheduler.countercache - INFO - QueueGet:defaultdict(None, {'ip': '10.111.24.194', 'pid': u'1017955', 'ad_w': '300', 'callback_id': u'jsonp_callback_70297595', 'ad_h': '250', 't': '1449041629', 'rid': '0782ced8-98c7-11e5-a288-d43d7e09c946', 'gmuid': 'mpmf6aA27a2Y7FaTkyp523wpaf7rRl5t', 'type': 1})
+2015-12-02 15:33:49,688 - tornado.application - ERROR - Uncaught exception GET /mt/media?pid=1017955&callback=jsonp_callback_70297595 (10.111.24.194)
+HTTPServerRequest(protocol='http', host='10.111.32.15:9001', method='GET', uri='/mt/media?pid=1017955&callback=jsonp_callback_70297595', version='HTTP/1.1', remote_ip='10.111.24.194', headers={'Accept-Language': 'zh-CN,zh;q=0.8', 'Accept-Encoding': 'gzip, deflate, sdch', 'Host': '10.111.32.15:9001', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.86 Safari/537.36', 'Connection': 'keep-alive', 'Cache-Control': 'max-age=0', 'Ra-Ver': '3.0.7', 'Ra-Sid': '7CCADB42-20140725-035944-294c8a-a62829', 'Upgrade-Insecure-Requests': '1'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1401, in _stack_context_handle_exception
+    raise_exc_info((type, value, traceback))
+  File "/usr/local/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/stack_context.py", line 314, in wrapped
+    ret = fn(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1613, in future_complete
+    f.result()
+  File "/usr/local/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/concurrent.py", line 232, in result
+    raise_exc_info(self._exc_info)
+  File "/usr/local/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/gen.py", line 1017, in run
+    yielded = self.gen.send(value)
+  File "/root/wyj/mtMedia/handlers/corehandler.py", line 134, in get
+    self.customResult()
+  File "/root/wyj/mtMedia/handlers/corehandler.py", line 106, in customResult
+    self.write(back)
+UnboundLocalError: local variable 'back' referenced before assignment
+2015-12-02 15:33:49,689 - tornado.access - ERROR - 500 GET /mt/media?pid=1017955&callback=jsonp_callback_70297595 (10.111.24.194) 31.49ms
+2015-12-02 15:33:49,861 - tornado.access - INFO - 304 GET /favicon.ico (10.111.24.194) 1.18ms
+2015-12-02 15:34:59,340 - handlers.corehandler - INFO - -------------CORE HTTP HANDLER----------------
+2015-12-02 15:34:59,345 - requests.packages.urllib3.connectionpool - INFO - Starting new HTTP connection (1): 123.56.16.39
+2015-12-02 15:34:59,367 - tornado.access - INFO - 200 GET /mt/media?pid=1017955&callback=jsonp_callback_70297595 (10.111.24.194) 27.92ms
+2015-12-02 15:34:59,367 - scheduler.countercache - INFO - QueueGet:defaultdict(None, {'ip': '10.111.24.194', 'pid': u'1017955', 'ad_w': '300', 'callback_id': u'jsonp_callback_70297595', 'ad_h': '250', 't': '1449041699', 'rid': '310b6134-98c7-11e5-9b86-d43d7e09c946', 'gmuid': 'MY7P42Ma7baimjXWWPYu2cyIEAp45EUX', 'type': 1})
+2015-12-02 15:34:59,886 - tornado.access - INFO - 304 GET /favicon.ico (10.111.24.194) 0.78ms
+2015-12-02 15:36:51,818 - handlers.corehandler - INFO - -------------CORE HTTP HANDLER----------------
+2015-12-02 15:36:51,821 - requests.packages.urllib3.connectionpool - INFO - Resetting dropped connection: 123.56.16.39
+2015-12-02 15:36:51,837 - tornado.access - INFO - 304 GET /mt/media?pid=1017955&callback=jsonp_callback_70297595 (10.111.24.194) 19.73ms
+2015-12-02 15:36:51,838 - scheduler.countercache - INFO - QueueGet:defaultdict(None, {'ip': '10.111.24.194', 'pid': u'1017955', 'ad_w': '300', 'callback_id': u'jsonp_callback_70297595', 'ad_h': '250', 't': '1449041811', 'rid': '741624b4-98c7-11e5-9b86-d43d7e09c946', 'gmuid': 'pmMZlvpjAejpmavGTqMW26aEvujwEqNc', 'type': 1})
+2015-12-02 15:36:52,171 - tornado.access - INFO - 304 GET /favicon.ico (10.111.24.194) 0.76ms
+2015-12-02 15:36:53,665 - handlers.corehandler - INFO - -------------CORE HTTP HANDLER----------------
+2015-12-02 15:36:53,677 - tornado.access - INFO - 304 GET /mt/media?pid=1017955&callback=jsonp_callback_70297595 (10.111.24.194) 12.00ms
+2015-12-02 15:36:53,677 - scheduler.countercache - INFO - QueueGet:defaultdict(None, {'ip': '10.111.24.194', 'pid': u'1017955', 'ad_w': '300', 'callback_id': u'jsonp_callback_70297595', 'ad_h': '250', 't': '1449041813', 'rid': '752ffe7e-98c7-11e5-9b86-d43d7e09c946', 'gmuid': 'AiAvJFp2AaXYYjau5gm5Xz252Yi98aWg', 'type': 1})
+2015-12-02 15:36:53,922 - tornado.access - INFO - 304 GET /favicon.ico (10.111.24.194) 0.71ms
+2015-12-02 15:38:52,787 - handlers.corehandler - INFO - -------------CORE HTTP HANDLER----------------
+2015-12-02 15:38:52,793 - requests.packages.urllib3.connectionpool - INFO - Starting new HTTP connection (1): 123.56.16.39
+2015-12-02 15:38:52,816 - tornado.access - INFO - 304 GET /mt/media?pid=1017955&callback=jsonp_callback_70297595 (10.111.24.194) 30.43ms
+2015-12-02 15:38:52,817 - scheduler.countercache - INFO - QueueGet:defaultdict(None, {'ip': '10.111.24.194', 'pid': u'1017955', 'ad_w': '300', 'callback_id': u'jsonp_callback_70297595', 'ad_h': '250', 't': '1449041932', 'rid': 'bc308870-98c7-11e5-b2bd-d43d7e09c946', 'gmuid': 'YmmjAjAv7f2mij2uT4AWj41oAoA41Sk0', 'type': 1})
+2015-12-02 15:38:53,148 - tornado.access - INFO - 304 GET /favicon.ico (10.111.24.194) 0.72ms
+2015-12-02 15:43:33,988 - handlers.corehandler - INFO - -------------CORE HTTP HANDLER----------------
+2015-12-02 15:43:33,991 - requests.packages.urllib3.connectionpool - INFO - Resetting dropped connection: 123.56.16.39
+2015-12-02 15:43:34,005 - tornado.access - INFO - 304 GET /mt/media?pid=1017955&callback=jsonp_callback_70297595 (10.111.24.194) 18.44ms
+2015-12-02 15:43:34,006 - scheduler.countercache - INFO - QueueGet:defaultdict(None, {'ip': '10.111.24.194', 'pid': u'1017955', 'ad_w': '300', 'callback_id': u'jsonp_callback_70297595', 'ad_h': '250', 't': '1449042213', 'rid': '63cc571c-98c8-11e5-b2bd-d43d7e09c946', 'gmuid': 'p77pUFY2jMXA72j55ypuERjTm4irLH5w', 'type': 1})
+2015-12-02 15:43:34,367 - tornado.access - INFO - 304 GET /favicon.ico (10.111.24.194) 0.73ms
+2015-12-02 15:44:10,755 - handlers.corehandler - INFO - -------------CORE HTTP HANDLER----------------
+2015-12-02 15:44:10,758 - requests.packages.urllib3.connectionpool - INFO - Starting new HTTP connection (1): 123.56.16.39
+2015-12-02 15:44:10,776 - tornado.access - INFO - 200 GET /mt/media?pid=mm_10001328_4164206_13516084&callback=jsonp_callback_70297595 (10.111.24.194) 21.97ms
+2015-12-02 15:44:10,777 - scheduler.countercache - INFO - QueueGet:defaultdict(None, {'ip': '10.111.24.194', 'pid': u'mm_10001328_4164206_13516084', 'ad_w': '300', 'callback_id': u'jsonp_callback_70297595', 'ad_h': '250', 't': '1449042250', 'rid': '79b68caa-98c8-11e5-8db9-d43d7e09c946', 'gmuid': 'A7p2k2p2p6aYM2aTkgM5EfDXAxvCbxWP', 'type': 1})
+2015-12-02 15:44:11,023 - tornado.access - INFO - 304 GET /favicon.ico (10.111.24.194) 0.75ms
+2015-12-02 15:44:43,532 - handlers.corehandler - INFO - -------------CORE HTTP HANDLER----------------
+2015-12-02 15:44:43,538 - requests.packages.urllib3.connectionpool - INFO - Starting new HTTP connection (1): 123.56.16.39
+2015-12-02 15:44:43,559 - tornado.access - INFO - 200 GET /mt/media?pid=mm_10001328_4164206_13516084&callback=jsonp_callback_70297595 (10.111.24.194) 28.75ms
+2015-12-02 15:44:43,560 - scheduler.countercache - INFO - QueueGet:defaultdict(None, {'ip': '10.111.24.194', 'pid': u'mm_10001328_4164206_13516084', 'ad_w': '300', 'callback_id': u'jsonp_callback_70297595', 'ad_h': '250', 't': '1449042283', 'rid': '8d3ff090-98c8-11e5-b027-d43d7e09c946', 'gmuid': 'YpYm3v7vM5FYpj2T5PMGLE9TYrFXwwBb', 'type': 1})
+2015-12-02 15:44:43,734 - tornado.access - INFO - 304 GET /favicon.ico (10.111.24.194) 0.71ms
+2015-12-02 15:45:17,863 - handlers.corehandler - INFO - -------------CORE HTTP HANDLER----------------
+2015-12-02 15:45:17,870 - requests.packages.urllib3.connectionpool - INFO - Starting new HTTP connection (1): 123.56.16.39
+2015-12-02 15:45:17,892 - tornado.access - INFO - 200 GET /mt/media?pid=mm_10001328_4164206_13516084&callback=jsonp_callback_70297595 (10.111.24.194) 29.83ms
+2015-12-02 15:45:17,893 - scheduler.countercache - INFO - QueueGet:defaultdict(None, {'ip': '10.111.24.194', 'pid': u'mm_10001328_4164206_13516084', 'ad_w': '300', 'callback_id': u'jsonp_callback_70297595', 'ad_h': '250', 't': '1449042317', 'rid': 'a1b68d9a-98c8-11e5-b8fa-d43d7e09c946', 'gmuid': '7ppXNXmFp22YYaX5k4MkLov67hMr1X5J', 'type': 1})
+2015-12-02 15:45:18,064 - tornado.access - INFO - 304 GET /favicon.ico (10.111.24.194) 0.53ms
+2015-12-02 15:49:14,873 - handlers.corehandler - INFO - -------------CORE HTTP HANDLER----------------
+2015-12-02 15:49:14,880 - requests.packages.urllib3.connectionpool - INFO - Starting new HTTP connection (1): 123.56.16.39
+2015-12-02 15:49:14,903 - tornado.access - INFO - 200 GET /mt/media?pid=mm_10001328_4164206_13516084&callback=jsonp_callback_70297595 (10.111.24.194) 30.26ms
+2015-12-02 15:49:14,903 - scheduler.countercache - INFO - QueueGet:defaultdict(None, {'ip': '10.111.24.194', 'pid': u'mm_10001328_4164206_13516084', 'ad_w': '300', 'callback_id': u'jsonp_callback_70297595', 'ad_h': '250', 't': '1449042554', 'rid': '2efb6414-98c9-11e5-bf56-d43d7e09c946', 'gmuid': 'iYmcA2YF7VaAY2XuWPM5RBN0m9j8SkC0', 'type': 1})
+2015-12-02 15:49:15,103 - tornado.access - INFO - 304 GET /favicon.ico (10.111.24.194) 0.79ms
+2015-12-02 15:49:24,640 - handlers.corehandler - INFO - -------------CORE HTTP HANDLER----------------
+2015-12-02 15:49:24,661 - tornado.access - INFO - 200 GET /mt/media?pid=mm_10001328_4164206_13516084&callback=jsonp_callback_70297595 (10.111.24.194) 21.56ms
+2015-12-02 15:49:24,662 - scheduler.countercache - INFO - QueueGet:defaultdict(None, {'ip': '10.111.24.194', 'pid': u'mm_10001328_4164206_13516084', 'ad_w': '300', 'callback_id': u'jsonp_callback_70297595', 'ad_h': '250', 't': '1449042564', 'rid': '34cda94c-98c9-11e5-bf56-d43d7e09c946', 'gmuid': 'ipAMBj7a75jiiv2554p5EB3QiUavdZC1', 'type': 1})
+2015-12-02 15:49:24,828 - tornado.access - INFO - 304 GET /favicon.ico (10.111.24.194) 0.70ms
+2015-12-02 15:49:53,113 - handlers.corehandler - INFO - -------------CORE HTTP HANDLER----------------
+2015-12-02 15:49:53,114 - handlers.corehandler - DEBUG - ip:10.111.24.194
+2015-12-02 15:49:53,115 - handlers.corehandler - DEBUG - cookie:Ami2LviaM4ap7X25u4mkE0IdA02V8HQx
+2015-12-02 15:49:53,116 - utils.kfconnect - DEBUG - settings.SENDMSG:False
+2015-12-02 15:49:53,121 - requests.packages.urllib3.connectionpool - INFO - Starting new HTTP connection (1): 123.56.16.39
+2015-12-02 15:49:53,138 - requests.packages.urllib3.connectionpool - DEBUG - "POST /tbid HTTP/1.1" 200 254
+2015-12-02 15:49:53,139 - scheduler.distributor - DEBUG - {"aid":"8","area":"","cid":"5","click_url":"http://www.163.com","eid":"1","m_url":"http://123.56.15.234:8080/data/creative_files/3/5/e67ad070074645168cb07e0111b59825.jpg","pid":"mm_10001328_4164206_13516084","rid":"45c65c58-98c9-11e5-af88-d43d7e09c946"}
+
+2015-12-02 15:49:53,142 - tornado.access - INFO - 200 GET /mt/media?pid=mm_10001328_4164206_13516084&callback=jsonp_callback_70297595 (10.111.24.194) 29.23ms
+2015-12-02 15:49:53,142 - scheduler.countercache - INFO - QueueGet:defaultdict(None, {'ip': '10.111.24.194', 'pid': u'mm_10001328_4164206_13516084', 'ad_w': '300', 'callback_id': u'jsonp_callback_70297595', 'ad_h': '250', 't': '1449042593', 'rid': '45c65c58-98c9-11e5-af88-d43d7e09c946', 'gmuid': 'Ami2LviaM4ap7X25u4mkE0IdA02V8HQx', 'type': 1})
+2015-12-02 15:49:53,365 - tornado.access - INFO - 304 GET /favicon.ico (10.111.24.194) 0.72ms
+2015-12-02 15:49:56,798 - scheduler.countercache - DEBUG - cacheDura:mm_10001328_4164206_13516084 1
+2015-12-02 15:50:00,935 - handlers.corehandler - INFO - -------------CORE HTTP HANDLER----------------
+2015-12-02 15:50:00,936 - handlers.corehandler - DEBUG - ip:10.111.24.194
+2015-12-02 15:50:00,936 - handlers.corehandler - DEBUG - cookie:Mp7Z3XpX7DvYpFa554iuEHYv2dvELnN2
+2015-12-02 15:50:00,937 - utils.kfconnect - DEBUG - settings.SENDMSG:False
+2015-12-02 15:50:00,950 - requests.packages.urllib3.connectionpool - DEBUG - "POST /tbid HTTP/1.1" 200 249
+2015-12-02 15:50:00,951 - scheduler.distributor - DEBUG - {"aid":"8","area":"","cid":"7","click_url":"http://www.163.com","eid":"2","m_url":"http://123.56.15.234/data/creative_files/4/7/1db65821c97e4038a0b9c08294e8e4d9.jpg","pid":"mm_10001328_4164206_13516084","rid":"4a6fd63a-98c9-11e5-af88-d43d7e09c946"}
+
+2015-12-02 15:50:00,953 - tornado.access - INFO - 200 GET /mt/media?pid=mm_10001328_4164206_13516084&callback=jsonp_callback_70297595 (10.111.24.194) 17.98ms
+2015-12-02 15:50:00,953 - scheduler.countercache - INFO - QueueGet:defaultdict(None, {'ip': '10.111.24.194', 'pid': u'mm_10001328_4164206_13516084', 'ad_w': '300', 'callback_id': u'jsonp_callback_70297595', 'ad_h': '250', 't': '1449042600', 'rid': '4a6fd63a-98c9-11e5-af88-d43d7e09c946', 'gmuid': 'Mp7Z3XpX7DvYpFa554iuEHYv2dvELnN2', 'type': 1})
+2015-12-02 15:50:01,121 - tornado.access - INFO - 304 GET /favicon.ico (10.111.24.194) 0.66ms
+2015-12-02 15:50:01,804 - scheduler.countercache - DEBUG - cacheDura:mm_10001328_4164206_13516084 1
+2015-12-02 15:53:12,025 - handlers.corehandler - INFO - -------------CORE HTTP HANDLER----------------
+2015-12-02 15:53:12,026 - handlers.corehandler - DEBUG - ip:10.111.24.194
+2015-12-02 15:53:12,028 - handlers.corehandler - DEBUG - cookie:mmmbFj7274jpY2vku4m5fJyLmDXe1tB6
+2015-12-02 15:53:12,028 - utils.kfconnect - DEBUG - settings.SENDMSG:False
+2015-12-02 15:53:12,033 - requests.packages.urllib3.connectionpool - INFO - Starting new HTTP connection (1): 123.56.16.39
+2015-12-02 15:53:12,049 - requests.packages.urllib3.connectionpool - DEBUG - "POST /tbid HTTP/1.1" 200 249
+2015-12-02 15:53:12,050 - scheduler.distributor - DEBUG - {"aid":"8","area":"","cid":"7","click_url":"http://www.163.com","eid":"2","m_url":"http://123.56.15.234/data/creative_files/4/7/1db65821c97e4038a0b9c08294e8e4d9.jpg","pid":"mm_10001328_4164206_13516084","rid":"bc55f02c-98c9-11e5-b9b8-d43d7e09c946"}
+
+2015-12-02 15:53:12,051 - handlers.corehandler - ERROR - global name 'logger' is not defined
+2015-12-02 15:53:12,053 - scheduler.countercache - INFO - QueueGet:defaultdict(None, {'ip': '10.111.24.194', 'pid': u'mm_10001328_4164206_13516084', 'ad_w': '300', 'callback_id': u'jsonp_callback_70297595', 'ad_h': '250', 't': '1449042792', 'rid': 'bc55f02c-98c9-11e5-b9b8-d43d7e09c946', 'gmuid': 'mmmbFj7274jpY2vku4m5fJyLmDXe1tB6', 'type': 1})
+2015-12-02 15:53:12,053 - tornado.application - ERROR - Uncaught exception GET /mt/media?pid=mm_10001328_4164206_13516084&callback=jsonp_callback_70297595 (10.111.24.194)
+HTTPServerRequest(protocol='http', host='10.111.32.15:9001', method='GET', uri='/mt/media?pid=mm_10001328_4164206_13516084&callback=jsonp_callback_70297595', version='HTTP/1.1', remote_ip='10.111.24.194', headers={'Accept-Language': 'zh-CN,zh;q=0.8', 'Accept-Encoding': 'gzip, deflate, sdch', 'Host': '10.111.32.15:9001', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.86 Safari/537.36', 'Connection': 'keep-alive', 'Ra-Ver': '3.0.7', 'Cache-Control': 'max-age=0', 'If-None-Match': '"958a1b9597b53c5aae0bf088940fe4ca8764f7f9"', 'Ra-Sid': '7CCADB42-20140725-035944-294c8a-a62829', 'Upgrade-Insecure-Requests': '1'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1401, in _stack_context_handle_exception
+    raise_exc_info((type, value, traceback))
+  File "/usr/local/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/stack_context.py", line 314, in wrapped
+    ret = fn(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1613, in future_complete
+    f.result()
+  File "/usr/local/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/concurrent.py", line 232, in result
+    raise_exc_info(self._exc_info)
+  File "/usr/local/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/gen.py", line 1017, in run
+    yielded = self.gen.send(value)
+  File "/root/wyj/mtMedia/handlers/corehandler.py", line 134, in get
+    self.customResult()
+  File "/root/wyj/mtMedia/handlers/corehandler.py", line 104, in customResult
+    back = creatAdJsonBack(self.dic, self.res)
+  File "/root/wyj/mtMedia/adrender.py", line 119, in creatAdJsonBack
+    logger.error(e)
+NameError: global name 'logger' is not defined
+2015-12-02 15:53:12,055 - tornado.access - ERROR - 500 GET /mt/media?pid=mm_10001328_4164206_13516084&callback=jsonp_callback_70297595 (10.111.24.194) 30.40ms
+2015-12-02 15:53:12,314 - tornado.access - INFO - 304 GET /favicon.ico (10.111.24.194) 0.96ms
+2015-12-02 15:53:14,752 - scheduler.countercache - DEBUG - cacheDura:mm_10001328_4164206_13516084 1
+2015-12-02 15:53:57,618 - handlers.corehandler - INFO - -------------CORE HTTP HANDLER----------------
+2015-12-02 15:53:57,619 - handlers.corehandler - DEBUG - ip:10.111.24.194
+2015-12-02 15:53:57,620 - handlers.corehandler - DEBUG - cookie:iYiaP2MjM5XiYjauWPYWf9dhvEFadh32
+2015-12-02 15:53:57,620 - utils.kfconnect - DEBUG - settings.SENDMSG:False
+2015-12-02 15:53:57,624 - requests.packages.urllib3.connectionpool - INFO - Starting new HTTP connection (1): 123.56.16.39
+2015-12-02 15:53:57,644 - requests.packages.urllib3.connectionpool - DEBUG - "POST /tbid HTTP/1.1" 200 254
+2015-12-02 15:53:57,645 - scheduler.distributor - DEBUG - {"aid":"8","area":"","cid":"5","click_url":"http://www.163.com","eid":"1","m_url":"http://123.56.15.234:8080/data/creative_files/3/5/e67ad070074645168cb07e0111b59825.jpg","pid":"mm_10001328_4164206_13516084","rid":"d782c69a-98c9-11e5-a031-d43d7e09c946"}
+
+2015-12-02 15:53:57,646 - adrender - DEBUG - jsonp_callback_70297595({"clickurls": ["http://123.56.16.39/mt/click?area=&url=http%3A%2F%2Fwww.163.com&cid=5&pid=mm_10001328_4164206_13516084&eid=1&aid=8&rid=d782c69a-98c9-11e5-a031-d43d7e09c946&t=1449042837"], "turls": ["http://www.163.com"], "adstype": 1, "planid": "1", "pid": "mm_10001328_4164206_13516084", "ctype": 1, "height": "", "width": "", "materials": ["http://123.56.15.234:8080/data/creative_files/3/5/e67ad070074645168cb07e0111b59825.jpg"], "creativeid": "5", "impid": "RDbq8jW9xfyQjxtK", "groupid": ""})
+2015-12-02 15:53:57,646 - handlers.corehandler - ERROR - write() only accepts bytes, unicode, and dict objects
+2015-12-02 15:53:57,647 - adrender - DEBUG - jsonp_callback_70297595({"clickurls": ["http://123.56.16.39/mt/click?area=&url=http%3A%2F%2Fwww.163.com&cid=5&pid=mm_10001328_4164206_13516084&eid=1&aid=8&rid=d782c69a-98c9-11e5-a031-d43d7e09c946&t=1449042837"], "turls": ["http://www.163.com"], "adstype": 1, "planid": "1", "pid": "mm_10001328_4164206_13516084", "ctype": 1, "height": "", "width": "", "materials": ["http://123.56.15.234:8080/data/creative_files/3/5/e67ad070074645168cb07e0111b59825.jpg"], "creativeid": "5", "impid": "L17NhOjiRNfh8oaY", "groupid": ""})
+2015-12-02 15:53:57,650 - scheduler.countercache - INFO - QueueGet:defaultdict(None, {'ip': '10.111.24.194', 'pid': u'mm_10001328_4164206_13516084', 'ad_w': '300', 'callback_id': u'jsonp_callback_70297595', 'ad_h': '250', 't': '1449042837', 'rid': 'd782c69a-98c9-11e5-a031-d43d7e09c946', 'gmuid': 'iYiaP2MjM5XiYjauWPYWf9dhvEFadh32', 'type': 1})
+2015-12-02 15:53:57,650 - tornado.application - ERROR - Uncaught exception GET /mt/media?pid=mm_10001328_4164206_13516084&callback=jsonp_callback_70297595 (10.111.24.194)
+HTTPServerRequest(protocol='http', host='10.111.32.15:9001', method='GET', uri='/mt/media?pid=mm_10001328_4164206_13516084&callback=jsonp_callback_70297595', version='HTTP/1.1', remote_ip='10.111.24.194', headers={'Accept-Language': 'zh-CN,zh;q=0.8', 'Accept-Encoding': 'gzip, deflate, sdch', 'Host': '10.111.32.15:9001', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.86 Safari/537.36', 'Connection': 'keep-alive', 'Cache-Control': 'max-age=0', 'Ra-Ver': '3.0.7', 'Ra-Sid': '7CCADB42-20140725-035944-294c8a-a62829', 'Upgrade-Insecure-Requests': '1'})
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1401, in _stack_context_handle_exception
+    raise_exc_info((type, value, traceback))
+  File "/usr/local/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/stack_context.py", line 314, in wrapped
+    ret = fn(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 1613, in future_complete
+    f.result()
+  File "/usr/local/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/concurrent.py", line 232, in result
+    raise_exc_info(self._exc_info)
+  File "/usr/local/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/gen.py", line 1017, in run
+    yielded = self.gen.send(value)
+  File "/root/wyj/mtMedia/handlers/corehandler.py", line 134, in get
+    self.customResult()
+  File "/root/wyj/mtMedia/handlers/corehandler.py", line 106, in customResult
+    self.write(back)
+  File "/usr/local/lib/python2.7/site-packages/tornado-4.3-py2.7-linux-x86_64.egg/tornado/web.py", line 690, in write
+    raise TypeError(message)
+TypeError: write() only accepts bytes, unicode, and dict objects
+2015-12-02 15:53:57,652 - tornado.access - ERROR - 500 GET /mt/media?pid=mm_10001328_4164206_13516084&callback=jsonp_callback_70297595 (10.111.24.194) 35.17ms
+2015-12-02 15:53:57,838 - tornado.access - INFO - 304 GET /favicon.ico (10.111.24.194) 1.20ms
+2015-12-02 15:54:00,968 - scheduler.countercache - DEBUG - cacheDura:mm_10001328_4164206_13516084 1
+2015-12-02 15:54:54,099 - handlers.corehandler - INFO - -------------CORE HTTP HANDLER----------------
+2015-12-02 15:54:54,100 - handlers.corehandler - DEBUG - ip:10.111.24.194
+2015-12-02 15:54:54,101 - handlers.corehandler - DEBUG - cookie:Ypp2rjMXMojYMva55yiuEzPka2jm5MHF
+2015-12-02 15:54:54,102 - utils.kfconnect - DEBUG - settings.SENDMSG:False
+2015-12-02 15:54:54,105 - requests.packages.urllib3.connectionpool - INFO - Starting new HTTP connection (1): 123.56.16.39
+2015-12-02 15:54:54,119 - requests.packages.urllib3.connectionpool - DEBUG - "POST /tbid HTTP/1.1" 200 254
+2015-12-02 15:54:54,119 - scheduler.distributor - DEBUG - {"aid":"8","area":"","cid":"5","click_url":"http://www.163.com","eid":"1","m_url":"http://123.56.15.234:8080/data/creative_files/3/5/e67ad070074645168cb07e0111b59825.jpg","pid":"mm_10001328_4164206_13516084","rid":"f92d2ee8-98c9-11e5-8008-d43d7e09c946"}
+
+2015-12-02 15:54:54,120 - adrender - DEBUG - jsonp_callback_70297595({"clickurls": ["http://123.56.16.39/mt/click?area=&url=http%3A%2F%2Fwww.163.com&cid=5&pid=mm_10001328_4164206_13516084&eid=1&aid=8&rid=f92d2ee8-98c9-11e5-8008-d43d7e09c946&t=1449042894"], "turls": ["http://www.163.com"], "adstype": 1, "planid": "1", "pid": "mm_10001328_4164206_13516084", "ctype": 1, "height": "", "width": "", "materials": ["http://123.56.15.234:8080/data/creative_files/3/5/e67ad070074645168cb07e0111b59825.jpg"], "creativeid": "5", "impid": "fEeTIlROW2AQRkbY", "groupid": ""})
+2015-12-02 15:54:54,122 - tornado.access - INFO - 200 GET /mt/media?pid=mm_10001328_4164206_13516084&callback=jsonp_callback_70297595 (10.111.24.194) 23.29ms
+2015-12-02 15:54:54,122 - scheduler.countercache - INFO - QueueGet:defaultdict(None, {'ip': '10.111.24.194', 'pid': u'mm_10001328_4164206_13516084', 'ad_w': '300', 'callback_id': u'jsonp_callback_70297595', 'ad_h': '250', 't': '1449042894', 'rid': 'f92d2ee8-98c9-11e5-8008-d43d7e09c946', 'gmuid': 'Ypp2rjMXMojYMva55yiuEzPka2jm5MHF', 'type': 1})
+2015-12-02 15:54:54,313 - tornado.access - INFO - 304 GET /favicon.ico (10.111.24.194) 0.74ms
+2015-12-02 15:54:58,037 - scheduler.countercache - DEBUG - cacheDura:mm_10001328_4164206_13516084 1
+2015-12-02 15:55:27,053 - handlers.corehandler - INFO - -------------CORE HTTP HANDLER----------------
+2015-12-02 15:55:27,054 - handlers.corehandler - DEBUG - ip:10.111.24.194
+2015-12-02 15:55:27,055 - handlers.corehandler - DEBUG - cookie:YmMtP2MFpH2mAv2TW4Mufqftvzjd1ln6
+2015-12-02 15:55:27,055 - utils.kfconnect - DEBUG - settings.SENDMSG:False
+2015-12-02 15:55:27,060 - requests.packages.urllib3.connectionpool - INFO - Starting new HTTP connection (1): 123.56.16.39
+2015-12-02 15:55:27,078 - requests.packages.urllib3.connectionpool - DEBUG - "POST /tbid HTTP/1.1" 200 254
+2015-12-02 15:55:27,079 - scheduler.distributor - DEBUG - {"aid":"8","area":"","cid":"5","click_url":"http://www.163.com","eid":"1","m_url":"http://123.56.15.234:8080/data/creative_files/3/5/e67ad070074645168cb07e0111b59825.jpg","pid":"mm_10001328_4164206_13516084","rid":"0cd176e8-98ca-11e5-aa81-d43d7e09c946"}
+
+2015-12-02 15:55:27,080 - adrender - DEBUG - jsonp_callback_70297595({"clickurls": ["http://123.56.16.39/mt/click?area=&url=http%3A%2F%2Fwww.163.com&cid=5&pid=mm_10001328_4164206_13516084&eid=1&aid=8&rid=0cd176e8-98ca-11e5-aa81-d43d7e09c946&t=1449042927"], "turls": ["http://www.163.com"], "adstype": 1, "planid": "1", "pid": "mm_10001328_4164206_13516084", "ctype": 1, "height": "", "width": "", "materials": ["http://123.56.15.234:8080/data/creative_files/3/5/e67ad070074645168cb07e0111b59825.jpg"], "creativeid": "5", "impid": "800dDDubhDOvOHsX", "groupid": ""})
+2015-12-02 15:55:27,081 - tornado.access - INFO - 200 GET /mt/media?pid=mm_10001328_4164206_13516084&callback=jsonp_callback_70297595 (10.111.24.194) 29.81ms
+2015-12-02 15:55:27,082 - scheduler.countercache - INFO - QueueGet:defaultdict(None, {'ip': '10.111.24.194', 'pid': u'mm_10001328_4164206_13516084', 'ad_w': '300', 'callback_id': u'jsonp_callback_70297595', 'ad_h': '250', 't': '1449042927', 'rid': '0cd176e8-98ca-11e5-aa81-d43d7e09c946', 'gmuid': 'YmMtP2MFpH2mAv2TW4Mufqftvzjd1ln6', 'type': 1})
+2015-12-02 15:55:27,238 - tornado.access - INFO - 304 GET /favicon.ico (10.111.24.194) 0.71ms
+2015-12-02 15:55:31,023 - scheduler.countercache - DEBUG - cacheDura:mm_10001328_4164206_13516084 1
+2015-12-02 15:56:04,817 - handlers.corehandler - INFO - -------------CORE HTTP HANDLER----------------
+2015-12-02 15:56:04,818 - handlers.corehandler - DEBUG - ip:10.111.24.194
+2015-12-02 15:56:04,818 - handlers.corehandler - DEBUG - cookie:77ictvMvAG2YAaF5T4mufgnBXCjaoy3Q
+2015-12-02 15:56:04,819 - utils.kfconnect - DEBUG - settings.SENDMSG:False
+2015-12-02 15:56:04,832 - requests.packages.urllib3.connectionpool - DEBUG - "POST /tbid HTTP/1.1" 200 254
+2015-12-02 15:56:04,833 - scheduler.distributor - DEBUG - {"aid":"8","area":"","cid":"5","click_url":"http://www.163.com","eid":"1","m_url":"http://123.56.15.234:8080/data/creative_files/3/5/e67ad070074645168cb07e0111b59825.jpg","pid":"mm_10001328_4164206_13516084","rid":"2353caba-98ca-11e5-aa81-d43d7e09c946"}
+
+2015-12-02 15:56:04,834 - adrender - DEBUG - jsonp_callback_70297595({"clickurls": ["http://123.56.16.39/mt/click?area=&url=http%3A%2F%2Fwww.163.com&cid=5&pid=mm_10001328_4164206_13516084&eid=1&aid=8&rid=2353caba-98ca-11e5-aa81-d43d7e09c946&t=1449042964"], "turls": ["http://www.163.com"], "adstype": 1, "planid": "1", "pid": "mm_10001328_4164206_13516084", "ctype": 1, "height": "", "width": "", "materials": ["http://123.56.15.234:8080/data/creative_files/3/5/e67ad070074645168cb07e0111b59825.jpg"], "creativeid": "5", "impid": "6BkU1NiV6RiAQrTL", "groupid": ""})
+2015-12-02 15:56:04,835 - tornado.access - INFO - 200 GET /mt/media?pid=mm_10001328_4164206_13516084&callback=jsonp_callback_70297595 (10.111.24.194) 18.35ms
+2015-12-02 15:56:04,835 - scheduler.countercache - INFO - QueueGet:defaultdict(None, {'ip': '10.111.24.194', 'pid': u'mm_10001328_4164206_13516084', 'ad_w': '300', 'callback_id': u'jsonp_callback_70297595', 'ad_h': '250', 't': '1449042964', 'rid': '2353caba-98ca-11e5-aa81-d43d7e09c946', 'gmuid': '77ictvMvAG2YAaF5T4mufgnBXCjaoy3Q', 'type': 1})
+2015-12-02 15:56:05,023 - tornado.access - INFO - 304 GET /favicon.ico (10.111.24.194) 0.76ms
+2015-12-02 15:56:06,060 - scheduler.countercache - DEBUG - cacheDura:mm_10001328_4164206_13516084 1
+2015-12-02 15:57:53,964 - handlers.corehandler - INFO - -------------CORE HTTP HANDLER----------------
+2015-12-02 15:57:53,965 - handlers.corehandler - DEBUG - ip:10.111.24.194
+2015-12-02 15:57:53,966 - handlers.corehandler - DEBUG - cookie:mpi3fXm2i2jMYXjWuIiTdps5Xmi6dv5y
+2015-12-02 15:57:53,967 - utils.kfconnect - DEBUG - settings.SENDMSG:False
+2015-12-02 15:57:53,972 - requests.packages.urllib3.connectionpool - INFO - Starting new HTTP connection (1): 123.56.16.39
+2015-12-02 15:57:53,988 - requests.packages.urllib3.connectionpool - DEBUG - "POST /tbid HTTP/1.1" 200 249
+2015-12-02 15:57:53,988 - scheduler.distributor - DEBUG - {"aid":"8","area":"","cid":"7","click_url":"http://www.163.com","eid":"2","m_url":"http://123.56.15.234/data/creative_files/4/7/1db65821c97e4038a0b9c08294e8e4d9.jpg","pid":"mm_10001328_4164206_13516084","rid":"646258be-98ca-11e5-9fa7-d43d7e09c946"}
+
+2015-12-02 15:57:53,989 - adrender - DEBUG - jsonp_callback_70297595({"clickurls": ["http://123.56.16.39/mt/click?area=&url=http%3A%2F%2Fwww.163.com&cid=7&pid=mm_10001328_4164206_13516084&eid=2&aid=8&rid=646258be-98ca-11e5-9fa7-d43d7e09c946&t=1449043073"], "turls": ["http://www.163.com"], "adstype": 1, "planid": "2", "pid": "mm_10001328_4164206_13516084", "ctype": 1, "height": 250, "width": 300, "materials": ["http://123.56.15.234/data/creative_files/4/7/1db65821c97e4038a0b9c08294e8e4d9.jpg"], "creativeid": "7", "impid": "2NhiKKRynF2z3CBg", "groupid": ""})
+2015-12-02 15:57:53,989 - tornado.access - INFO - 200 GET /mt/media?pid=mm_10001328_4164206_13516084&callback=jsonp_callback_70297595 (10.111.24.194) 25.42ms
+2015-12-02 15:57:53,989 - scheduler.countercache - INFO - QueueGet:defaultdict(None, {'ip': '10.111.24.194', 'pid': u'mm_10001328_4164206_13516084', 'ad_w': '300', 'callback_id': u'jsonp_callback_70297595', 'ad_h': '250', 't': '1449043073', 'rid': '646258be-98ca-11e5-9fa7-d43d7e09c946', 'gmuid': 'mpi3fXm2i2jMYXjWuIiTdps5Xmi6dv5y', 'type': 1})
+2015-12-02 15:57:54,191 - tornado.access - INFO - 304 GET /favicon.ico (10.111.24.194) 0.80ms
+2015-12-02 15:57:56,867 - scheduler.countercache - DEBUG - cacheDura:mm_10001328_4164206_13516084 1
+2015-12-02 15:58:01,216 - handlers.corehandler - INFO - -------------CORE HTTP HANDLER----------------
+2015-12-02 15:58:01,217 - handlers.corehandler - DEBUG - ip:10.111.24.194
+2015-12-02 15:58:01,218 - handlers.corehandler - DEBUG - cookie:pp74qaMj2m27ijaG54iW1YOFbMmhE4DJ
+2015-12-02 15:58:01,218 - utils.kfconnect - DEBUG - settings.SENDMSG:False
+2015-12-02 15:58:01,231 - requests.packages.urllib3.connectionpool - DEBUG - "POST /tbid HTTP/1.1" 200 254
+2015-12-02 15:58:01,232 - scheduler.distributor - DEBUG - {"aid":"8","area":"","cid":"5","click_url":"http://www.163.com","eid":"1","m_url":"http://123.56.15.234:8080/data/creative_files/3/5/e67ad070074645168cb07e0111b59825.jpg","pid":"mm_10001328_4164206_13516084","rid":"68b4ed00-98ca-11e5-9fa7-d43d7e09c946"}
+
+2015-12-02 15:58:01,233 - adrender - DEBUG - jsonp_callback_70297595({"clickurls": ["http://123.56.16.39/mt/click?area=&url=http%3A%2F%2Fwww.163.com&cid=5&pid=mm_10001328_4164206_13516084&eid=1&aid=8&rid=68b4ed00-98ca-11e5-9fa7-d43d7e09c946&t=1449043081"], "turls": ["http://www.163.com"], "adstype": 1, "planid": "1", "pid": "mm_10001328_4164206_13516084", "ctype": 1, "height": 250, "width": 300, "materials": ["http://123.56.15.234:8080/data/creative_files/3/5/e67ad070074645168cb07e0111b59825.jpg"], "creativeid": "5", "impid": "YqrS6idGmRB4R9ps", "groupid": ""})
+2015-12-02 15:58:01,234 - tornado.access - INFO - 200 GET /mt/media?pid=mm_10001328_4164206_13516084&callback=jsonp_callback_70297595 (10.111.24.194) 17.95ms
+2015-12-02 15:58:01,234 - scheduler.countercache - INFO - QueueGet:defaultdict(None, {'ip': '10.111.24.194', 'pid': u'mm_10001328_4164206_13516084', 'ad_w': '300', 'callback_id': u'jsonp_callback_70297595', 'ad_h': '250', 't': '1449043081', 'rid': '68b4ed00-98ca-11e5-9fa7-d43d7e09c946', 'gmuid': 'pp74qaMj2m27ijaG54iW1YOFbMmhE4DJ', 'type': 1})
+2015-12-02 15:58:01,414 - tornado.access - INFO - 304 GET /favicon.ico (10.111.24.194) 0.62ms
+2015-12-02 15:58:01,873 - scheduler.countercache - DEBUG - cacheDura:mm_10001328_4164206_13516084 1
+2015-12-02 16:02:56,011 - handlers.corehandler - INFO - -------------CORE HTTP HANDLER----------------
+2015-12-02 16:02:56,012 - handlers.corehandler - DEBUG - ip:10.111.24.194
+2015-12-02 16:02:56,013 - handlers.corehandler - DEBUG - cookie:77Y2xvpjAWa7A2a55PmudSUH2Y221cCJ
+2015-12-02 16:02:56,013 - utils.kfconnect - DEBUG - settings.SENDMSG:False
+2015-12-02 16:02:56,015 - requests.packages.urllib3.connectionpool - INFO - Resetting dropped connection: 123.56.16.39
+2015-12-02 16:02:56,033 - requests.packages.urllib3.connectionpool - DEBUG - "POST /tbid HTTP/1.1" 200 254
+2015-12-02 16:02:56,034 - scheduler.distributor - DEBUG - {"aid":"8","area":"","cid":"5","click_url":"http://www.163.com","eid":"1","m_url":"http://123.56.15.234:8080/data/creative_files/3/5/e67ad070074645168cb07e0111b59825.jpg","pid":"mm_10001328_4164206_13516084","rid":"186b15ee-98cb-11e5-9fa7-d43d7e09c946"}
+
+2015-12-02 16:02:56,034 - adrender - DEBUG - jsonp_callback_70297595({"clickurls": ["http://123.56.16.39/mt/click?area=&url=http%3A%2F%2Fwww.163.com&cid=5&pid=mm_10001328_4164206_13516084&eid=1&aid=8&rid=186b15ee-98cb-11e5-9fa7-d43d7e09c946&t=1449043376"], "turls": ["http://www.163.com"], "adstype": 1, "planid": "1", "pid": "mm_10001328_4164206_13516084", "ctype": 1, "height": 250, "width": 300, "materials": ["http://123.56.15.234:8080/data/creative_files/3/5/e67ad070074645168cb07e0111b59825.jpg"], "creativeid": "5", "impid": "ObZxO5SL0DUIM5uV", "groupid": ""})
+2015-12-02 16:02:56,034 - tornado.access - INFO - 200 GET /mt/media?pid=mm_10001328_4164206_13516084&callback=jsonp_callback_70297595 (10.111.24.194) 23.58ms
+2015-12-02 16:02:56,035 - scheduler.countercache - INFO - QueueGet:defaultdict(None, {'ip': '10.111.24.194', 'pid': u'mm_10001328_4164206_13516084', 'ad_w': '300', 'callback_id': u'jsonp_callback_70297595', 'ad_h': '250', 't': '1449043376', 'rid': '186b15ee-98cb-11e5-9fa7-d43d7e09c946', 'gmuid': '77Y2xvpjAWa7A2a55PmudSUH2Y221cCJ', 'type': 1})
+2015-12-02 16:02:56,289 - tornado.access - INFO - 304 GET /favicon.ico (10.111.24.194) 0.71ms
+2015-12-02 16:02:57,170 - scheduler.countercache - DEBUG - cacheDura:mm_10001328_4164206_13516084 1
+2015-12-02 16:03:07,153 - handlers.corehandler - INFO - -------------CORE HTTP HANDLER----------------
+2015-12-02 16:03:07,154 - handlers.corehandler - DEBUG - ip:10.111.24.194
+2015-12-02 16:03:07,154 - handlers.corehandler - DEBUG - cookie:i7M6PaMvihXYMjjuuIY518ht2gaQwOxb
+2015-12-02 16:03:07,155 - utils.kfconnect - DEBUG - settings.SENDMSG:False
+2015-12-02 16:03:07,169 - requests.packages.urllib3.connectionpool - DEBUG - "POST /tbid HTTP/1.1" 200 249
+2015-12-02 16:03:07,170 - scheduler.distributor - DEBUG - {"aid":"8","area":"","cid":"7","click_url":"http://www.163.com","eid":"2","m_url":"http://123.56.15.234/data/creative_files/4/7/1db65821c97e4038a0b9c08294e8e4d9.jpg","pid":"mm_10001328_4164206_13516084","rid":"1f0f2d9a-98cb-11e5-9fa7-d43d7e09c946"}
+
+2015-12-02 16:03:07,170 - adrender - DEBUG - jsonp_callback_70297595({"clickurls": ["http://123.56.16.39/mt/click?area=&url=http%3A%2F%2Fwww.163.com&cid=7&pid=mm_10001328_4164206_13516084&eid=2&aid=8&rid=1f0f2d9a-98cb-11e5-9fa7-d43d7e09c946&t=1449043387"], "turls": ["http://www.163.com"], "adstype": 1, "planid": "2", "pid": "mm_10001328_4164206_13516084", "ctype": 1, "height": 250, "width": 300, "materials": ["http://123.56.15.234/data/creative_files/4/7/1db65821c97e4038a0b9c08294e8e4d9.jpg"], "creativeid": "7", "impid": "SinHtxCVT38YQAM0", "groupid": ""})
+2015-12-02 16:03:07,171 - tornado.access - INFO - 200 GET /mt/media?pid=mm_10001328_4164206_13516084&callback=jsonp_callback_70297595 (10.111.24.194) 18.61ms
+2015-12-02 16:03:07,172 - scheduler.countercache - INFO - QueueGet:defaultdict(None, {'ip': '10.111.24.194', 'pid': u'mm_10001328_4164206_13516084', 'ad_w': '300', 'callback_id': u'jsonp_callback_70297595', 'ad_h': '250', 't': '1449043387', 'rid': '1f0f2d9a-98cb-11e5-9fa7-d43d7e09c946', 'gmuid': 'i7M6PaMvihXYMjjuuIY518ht2gaQwOxb', 'type': 1})
+2015-12-02 16:03:07,181 - scheduler.countercache - DEBUG - cacheDura:mm_10001328_4164206_13516084 1
+2015-12-02 16:03:07,361 - tornado.access - INFO - 304 GET /favicon.ico (10.111.24.194) 0.69ms
+2015-12-02 16:03:52,647\thandlers.corehandler\tINFO\t-------------CORE HTTP HANDLER----------------
+2015-12-02 16:03:52,647\thandlers.corehandler\tDEBUG\tip:10.111.24.194
+2015-12-02 16:03:52,648\thandlers.corehandler\tDEBUG\tcookie:M7YS2Fm2iejmm22kk47W1uSdp3X1wpGP
+2015-12-02 16:03:52,649\tutils.kfconnect\tDEBUG\tsettings.SENDMSG:False
+2015-12-02 16:03:52,654\trequests.packages.urllib3.connectionpool\tINFO\tStarting new HTTP connection (1): 123.56.16.39
+2015-12-02 16:03:52,670\trequests.packages.urllib3.connectionpool\tDEBUG\t"POST /tbid HTTP/1.1" 200 254
+2015-12-02 16:03:52,670\tscheduler.distributor\tDEBUG\t{"aid":"8","area":"","cid":"5","click_url":"http://www.163.com","eid":"1","m_url":"http://123.56.15.234:8080/data/creative_files/3/5/e67ad070074645168cb07e0111b59825.jpg","pid":"mm_10001328_4164206_13516084","rid":"3a2cf49a-98cb-11e5-b382-d43d7e09c946"}
+
+2015-12-02 16:03:52,671\tadrender\tDEBUG\tjsonp_callback_70297595({"clickurls": ["http://123.56.16.39/mt/click?area=&url=http%3A%2F%2Fwww.163.com&cid=5&pid=mm_10001328_4164206_13516084&eid=1&aid=8&rid=3a2cf49a-98cb-11e5-b382-d43d7e09c946&t=1449043432"], "turls": ["http://www.163.com"], "adstype": "1", "planid": "1", "pid": "mm_10001328_4164206_13516084", "ctype": "1", "height": "250", "width": "300", "materials": ["http://123.56.15.234:8080/data/creative_files/3/5/e67ad070074645168cb07e0111b59825.jpg"], "creativeid": "5", "impid": "3EIq0mQW2SXUZYI3", "groupid": ""})
+2015-12-02 16:03:52,672\ttornado.access\tINFO\t200 GET /mt/media?pid=mm_10001328_4164206_13516084&callback=jsonp_callback_70297595 (10.111.24.194) 26.78ms
+2015-12-02 16:03:52,673\tscheduler.countercache\tINFO\tQueueGet:defaultdict(None, {'ip': '10.111.24.194', 'pid': u'mm_10001328_4164206_13516084', 'ad_w': '300', 'callback_id': u'jsonp_callback_70297595', 'ad_h': '250', 't': '1449043432', 'rid': '3a2cf49a-98cb-11e5-b382-d43d7e09c946', 'gmuid': 'M7YS2Fm2iejmm22kk47W1uSdp3X1wpGP', 'type': 1})
+2015-12-02 16:03:52,850\ttornado.access\tINFO\t304 GET /favicon.ico (10.111.24.194) 0.71ms
+2015-12-02 16:03:55,203\tscheduler.countercache\tDEBUG\tcacheDura:mm_10001328_4164206_13516084 1
+2015-12-02 16:04:15,556|handlers.corehandler|INFO|-------------CORE HTTP HANDLER----------------
+2015-12-02 16:04:15,557|handlers.corehandler|DEBUG|ip:10.111.24.194
+2015-12-02 16:04:15,559|handlers.corehandler|DEBUG|cookie:YM7LL27jmhvmivjTuy7TdkQ373XB1BZ3
+2015-12-02 16:04:15,559|utils.kfconnect|DEBUG|settings.SENDMSG:False
+2015-12-02 16:04:15,564|requests.packages.urllib3.connectionpool|INFO|Starting new HTTP connection (1): 123.56.16.39
+2015-12-02 16:04:15,577|requests.packages.urllib3.connectionpool|DEBUG|"POST /tbid HTTP/1.1" 200 254
+2015-12-02 16:04:15,577|scheduler.distributor|DEBUG|{"aid":"8","area":"","cid":"5","click_url":"http://www.163.com","eid":"1","m_url":"http://123.56.15.234:8080/data/creative_files/3/5/e67ad070074645168cb07e0111b59825.jpg","pid":"mm_10001328_4164206_13516084","rid":"47d4b8c6-98cb-11e5-97ef-d43d7e09c946"}
+
+2015-12-02 16:04:15,578|adrender|DEBUG|jsonp_callback_70297595({"clickurls": ["http://123.56.16.39/mt/click?area=&url=http%3A%2F%2Fwww.163.com&cid=5&pid=mm_10001328_4164206_13516084&eid=1&aid=8&rid=47d4b8c6-98cb-11e5-97ef-d43d7e09c946&t=1449043455"], "turls": ["http://www.163.com"], "adstype": "1", "planid": "1", "pid": "mm_10001328_4164206_13516084", "ctype": "1", "height": "250", "width": "300", "materials": ["http://123.56.15.234:8080/data/creative_files/3/5/e67ad070074645168cb07e0111b59825.jpg"], "creativeid": "5", "impid": "wDRszAbYDVPhmcLH", "groupid": ""})
+2015-12-02 16:04:15,578|tornado.access|INFO|200 GET /mt/media?pid=mm_10001328_4164206_13516084&callback=jsonp_callback_70297595 (10.111.24.194) 23.00ms
+2015-12-02 16:04:15,578|scheduler.countercache|INFO|QueueGet:defaultdict(None, {'ip': '10.111.24.194', 'pid': u'mm_10001328_4164206_13516084', 'ad_w': '300', 'callback_id': u'jsonp_callback_70297595', 'ad_h': '250', 't': '1449043455', 'rid': '47d4b8c6-98cb-11e5-97ef-d43d7e09c946', 'gmuid': 'YM7LL27jmhvmivjTuy7TdkQ373XB1BZ3', 'type': 1})
+2015-12-02 16:04:15,756|tornado.access|INFO|304 GET /favicon.ico (10.111.24.194) 0.31ms
+2015-12-02 16:04:17,683|scheduler.countercache|DEBUG|cacheDura:mm_10001328_4164206_13516084 1
+2015-12-02 16:04:49,757 | handlers.corehandler | INFO | -------------CORE HTTP HANDLER----------------
+2015-12-02 16:04:49,758 | handlers.corehandler | DEBUG | ip:10.111.24.194
+2015-12-02 16:04:49,759 | handlers.corehandler | DEBUG | cookie:i7MtNFMvp2aiMXaWuI75duPYvkYhowBB
+2015-12-02 16:04:49,760 | utils.kfconnect | DEBUG | settings.SENDMSG:False
+2015-12-02 16:04:49,764 | requests.packages.urllib3.connectionpool | INFO | Starting new HTTP connection (1): 123.56.16.39
+2015-12-02 16:04:49,781 | requests.packages.urllib3.connectionpool | DEBUG | "POST /tbid HTTP/1.1" 200 249
+2015-12-02 16:04:49,782 | scheduler.distributor | DEBUG | {"aid":"8","area":"","cid":"7","click_url":"http://www.163.com","eid":"2","m_url":"http://123.56.15.234/data/creative_files/4/7/1db65821c97e4038a0b9c08294e8e4d9.jpg","pid":"mm_10001328_4164206_13516084","rid":"5c375e54-98cb-11e5-bbb1-d43d7e09c946"}
+
+2015-12-02 16:04:49,783 | adrender | DEBUG | jsonp_callback_70297595({"clickurls": ["http://123.56.16.39/mt/click?area=&url=http%3A%2F%2Fwww.163.com&cid=7&pid=mm_10001328_4164206_13516084&eid=2&aid=8&rid=5c375e54-98cb-11e5-bbb1-d43d7e09c946&t=1449043489"], "turls": ["http://www.163.com"], "adstype": "1", "planid": "2", "pid": "mm_10001328_4164206_13516084", "ctype": "1", "height": "250", "width": "300", "materials": ["http://123.56.15.234/data/creative_files/4/7/1db65821c97e4038a0b9c08294e8e4d9.jpg"], "creativeid": "7", "impid": "R62AjG2Ar589Got0", "groupid": ""})
+2015-12-02 16:04:49,784 | tornado.access | INFO | 200 GET /mt/media?pid=mm_10001328_4164206_13516084&callback=jsonp_callback_70297595 (10.111.24.194) 27.80ms
+2015-12-02 16:04:49,784 | scheduler.countercache | INFO | QueueGet:defaultdict(None, {'ip': '10.111.24.194', 'pid': u'mm_10001328_4164206_13516084', 'ad_w': '300', 'callback_id': u'jsonp_callback_70297595', 'ad_h': '250', 't': '1449043489', 'rid': '5c375e54-98cb-11e5-bbb1-d43d7e09c946', 'gmuid': 'i7MtNFMvp2aiMXaWuI75duPYvkYhowBB', 'type': 1})
+2015-12-02 16:04:49,958 | tornado.access | INFO | 304 GET /favicon.ico (10.111.24.194) 0.27ms
+2015-12-02 16:04:53,667 | scheduler.countercache | DEBUG | cacheDura:mm_10001328_4164206_13516084 1

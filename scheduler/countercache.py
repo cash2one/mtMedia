@@ -6,12 +6,16 @@ import threading
 from settings import *
 from collections import defaultdict
 from scheduler.database import Database
-from utils.log import dbg, loginfo, logwarn, logerr
 from tornado.queues import Queue
 from tornado.ioloop import  IOLoop
 import tornado.gen
 
-CACHE_DUR_FREQ = 1
+from utils.general import INTER_MSG_SHOW, INTER_MSG_CLICK
+
+import logging
+logger = logging.getLogger(__name__)
+
+CACHE_DUR_FREQ = 5
 
 
 '''
@@ -63,7 +67,8 @@ class CounterCache(threading.Thread):
             self.cacheInit(self.m_Cache_A)
 
     def cacheInit(self, cache):
-        cache['pid_info'] = { 'request':defaultdict(int), 'response':defaultdict(int) }
+        cache['pid_info'] = { 'request':defaultdict(int), 'response':defaultdict(int), 'eid':defaultdict(int)}
+        cache['click_info'] = { 'pid':defaultdict(int), 'eid':defaultdict(int) }
 
     @tornado.gen.coroutine
     def queueMsgPut(self, msg):
@@ -74,15 +79,32 @@ class CounterCache(threading.Thread):
         while True:
             msg = yield self.m_queue.get()
             #print msg
-            # put
+            logger.info('QueueGet:%r' % msg)
             self.cacheInfoPut(msg)
 
     def cacheInfoPut(self, msg):
         cache = self.switchCache()
-        #print msg
-        if msg.has_key('pid'):
-            pid = msg['pid']
-            cache['pid_info']['request'][pid] = cache['pid_info']['request'][pid] + 1
+        if msg.has_key('type') and msg['type'] == INTER_MSG_SHOW:
+            if msg.has_key('pid'):
+                pid = msg['pid']
+                pid_request = cache['pid_info']['request']
+                pid_request[pid] = pid_request[pid] + 1
+
+            if msg.has_key('eid'):
+                eid = msg['eid']
+                imp_info_eid = cache['pid_info']['eid']
+                imp_info_eid[eid] = imp_info_eid[eid] + 1
+
+        if msg.has_key('type') and msg['type'] == INTER_MSG_CLICK:
+            if msg.has_key('pid') and msg.has_key('eid'):
+                pid = msg['pid']
+                eid = msg['eid']
+                click_info_pid = cache['click_info']['pid']
+                click_info_eid = cache['click_info']['eid']
+                click_info_pid[pid] = click_info_pid[pid] + 1
+                click_info_eid[eid] = click_info_eid[eid] + 1
+            else:
+                loggerr.warn("cacheInfoPut lose pid or eid:%r" % msg)
             #print cache
 
 
@@ -93,10 +115,10 @@ class CounterCache(threading.Thread):
         if self.m_CacheFlag == 2:
             cache = self.m_Cache_A
 
-        #loginfo(cache)
         if cache.has_key('pid_info'):
             for pid in cache['pid_info']['request'].iterkeys():
                 self.database.incPidRequest(pid, cache['pid_info']['request'][pid])
+                logger.debug("cacheDura:%s %r" % (pid, cache['pid_info']['request'][pid]))
             #for pid in cache['pid_info']['request'].iterkeys():
             #    self.database.incPidRequest(pid, cache['pid_info']['request'][pid])
 
@@ -114,7 +136,6 @@ class CounterCache(threading.Thread):
                 self.clearCache()
 
             except Exception, e:
-                logerr(e)
                 continue
 
 

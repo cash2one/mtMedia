@@ -8,17 +8,20 @@
 ###############################################################################
 import uuid
 import urllib
+import tornado.log
 import tornado.web
 import tornado.ioloop
 from settings import *
 from tornado import gen
-import tornado.httpserver
-from tornado.httpclient import *
 from handlers.cookiehandler import *
 import random, time, os, sys, socket
-from utils.log import init_syslog, logimpr, loginfo,logclick, dbg, logwarn, logerr, _lvl
 from collections import defaultdict
-from adrender import defaultAdRender, creatAdRender
+from adrender import defaultAdRender, creatAdRender, creatAdJsonBack
+from utils.general import INTER_MSG_SHOW
+from utils.general import random_str
+
+import logging
+logger = logging.getLogger(__name__)
 
 IMG_FILE = open('./1x1.gif','r')
 try:
@@ -43,10 +46,12 @@ def urlsafe_b64decode(s):
 
 class CoreHttpHandler(tornado.web.RequestHandler):
     def initialize(self, broker):
+        self.res = None
         self.broker = broker
         self.cookiehandler = CookieHanlder(broker)
         self.ob_dist = broker.dist
         self.ob_requester = broker.requester
+        self.ob_msg_server = broker.msg_server
 
     def prepare(self):
         self.set_header('P3P','CP="CURa ADMa DEVa PSAo PSDo OUR BUS UNI PUR INT DEM STA PRE COM NAV OTC NOI DSP COR"')
@@ -57,6 +62,7 @@ class CoreHttpHandler(tornado.web.RequestHandler):
             if ipaddr == 0:
                 ipaddr = self.get_argument("ip", default=0)
             self.dic['ip'] = ipaddr
+            logger.debug('ip:%s' % self.dic['ip'])
         except Exception:
             pass
 
@@ -68,15 +74,17 @@ class CoreHttpHandler(tornado.web.RequestHandler):
                 self.set_cookie("uc", self.ucookie, domain=DOMAIN, expires_days=uc_expires)
             else:
                 if not self.cookiehandler.checkCookie(self.ucookie):
-                    dbg("UserCookie:%s is illegal!" % self.ucookie)
+                    logger.error("UserCookie:%s is illegal!" % self.ucookie)
                     self.ucookie = self.cookiehandler.setCookie()
                     self.set_cookie("uc", self.ucookie, domain=DOMAIN, expires_days=uc_expires)
             self.dic['gmuid'] = self.ucookie          
+            logger.debug('cookie:%s' % self.dic['gmuid'])
         except Exception:
             pass  
 
     def recordReq(self):
         self.broker.countercache.queueMsgPut( self.dic )
+        self.ob_msg_server.sendMsgToStat(T_IMP, self.dic)
         pass
 
     def recordRes(self):
@@ -89,10 +97,12 @@ class CoreHttpHandler(tornado.web.RequestHandler):
     def customResult(self):
         self.set_header("Content-Type", "text/html")
         if self.res is None:
-            html = defaultAdRender()
+            back = defaultAdRender()
         else:
-            html = creatAdRender(self.dic, self.res)
-        self.write(html)
+            self.res['impid'] = random_str()
+            #back = creatAdRender(self.dic, self.res)
+            back = creatAdJsonBack(self.dic, self.res)
+        self.write(back)
         self.finish()
 
     @tornado.web.asynchronous
@@ -100,24 +110,27 @@ class CoreHttpHandler(tornado.web.RequestHandler):
     @gen.coroutine
     def get(self):
         try:
-            dbg("-------------CORE HTTP HANDLER----------------")
+            logger.debug("-------------CORE HTTP HANDLER----------------")
             self.dic = defaultdict()
+            self.dic['type'] = INTER_MSG_SHOW
             self.dic['t'] = str( int(time.time()) )
             self.dic['rid'] = str(uuid.uuid1())
             self.ucookie = self.get_cookie('uc')
-            self.dic['pid'] = self.get_argument("pid", default = None)
-            self.dic['ad_w'] = self.get_argument("w", default = '0')
-            self.dic['ad_h'] = self.get_argument("h", default = '0')
+            self.dic['callback_id'] = self.get_argument("callback", default = None)
+            self.dic['pid'] = self.get_argument("pid", default = 'mm_10001328_4164206_13516084')
+            
+            self.dic['ad_w'] = self.get_argument("w", default = '300')
+            self.dic['ad_h'] = self.get_argument("h", default = '250')
             self.getIp()
             self.dealCookie()
             self.recordReq()
             #self.res = yield self.ob_dist.dist(self.dic)
             self.res = yield self.ob_requester.getAdReturn(self.dic)
             self.customResult()
+			logger.info("---------------------------------------------")
             return
         except Exception, e:
-            # Default
-            print "CORE HTTP HANDLER Err: %s" % e
+            logger.error(e)
             self.customResult()
             return
 
