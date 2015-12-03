@@ -73,6 +73,37 @@ class Database(object):
         except Exception,e:
             print e
 
+    def incPidClick(self, pid, num):
+        try:
+            if pid :
+                self.switch()
+                today = self.today()
+                hour = self.hour()
+                key = "pid:click:%s:%s" % (today, pid)
+                self.red._hincrby(key, hour, num)
+        except Exception,e:
+            print e
+
+    def incEidClick(self, eid, num):
+        try:
+            if eid :
+                self.switch()
+                today = self.today()
+                hour = self.hour()
+                key = "eid:click:%s:%s" % (today, eid)
+                self.red._hincrby(key, hour, num)
+        except Exception,e:
+            print e
+    def incEidShow(self, eid, num):
+        try:
+            if eid :
+                self.switch()
+                today = self.today()
+                hour = self.hour()
+                key = "eid:show:%s:%s" % (today, pid)
+                self.red._hincrby(key, hour, num)
+        except Exception,e:
+            print e
 
     def incPidPv(self, pid, eid):
         try:

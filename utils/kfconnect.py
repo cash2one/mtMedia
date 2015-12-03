@@ -30,17 +30,20 @@ class KafkaCon():
         self._initConnect()
 
     def _initConnect(self):
-        if settings.SENDMSG:    
-            self.stat_con = KafkaClient(self.msg_stat_server[0] +':' + str(self.msg_stat_server[1])) 
-            show_producer = Producer(self.stat_con,  async=False)
-            click_producer = Producer(self.stat_con, async=False)
-            action_producer = Producer(self.stat_con,  async=False)
+        try:
+            if settings.SENDMSG:    
+                self.stat_con = KafkaClient(self.msg_stat_server[0] +':' + str(self.msg_stat_server[1])) 
+                show_producer = Producer(self.stat_con,  async=False)
+                click_producer = Producer(self.stat_con, async=False)
+                action_producer = Producer(self.stat_con,  async=False)
 
-            self.stat = {
+                self.stat = {
                          settings.T_IMP:show_producer,
                          settings.T_CLK:click_producer,
                          settings.T_ACT:action_producer,
                         }
+        except Exception, e:
+            logger.error('_initConnect Error:%s' % e)
 
     def _getPartion(self):
         if self.part_counter < self.part_num:
@@ -60,15 +63,19 @@ class KafkaCon():
                     return True
 
             except kafka.common.FailedPayloadsError:
-                    logger.warn("FailedPayloadsError")
-                    self._initConnect()
+                logger.warn("FailedPayloadsError")
+                self._initConnect()
 
             except kafka.common.ConnectionError:
-                    logger.warn("ConnectionError")
-                    self._initConnect()
+                logger.warn("ConnectionError")
+                self._initConnect()
+
+            except kafka.common.KafkaUnavailableError:
+                logger.warn("KafkaUnavailableError")
+                self._initConnect()
 
             except Exception, e:
-                    logger.error('Send Msg to Kafka Err:%s' % e)
+                logger.error('Send Msg to Kafka Err:%s' % e)
         else:
             logger.debug('settings.SENDMSG:%r' % settings.SENDMSG)
             return False
