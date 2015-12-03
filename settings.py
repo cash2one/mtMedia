@@ -17,7 +17,7 @@ LOG_LEVEL = 'INFO'
 DEVICE_ID = '01'
 
 '''服务端口配置'''
-SERVER_PORT = [9001,9002]
+SERVER_PORT = [10001,10008]
 
 ''' Ad Core 配置'''
 AD_CORE_SERVER = "http://123.56.16.39/tbid"

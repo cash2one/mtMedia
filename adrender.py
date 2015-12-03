@@ -7,8 +7,8 @@ from jinja2 import Environment, PackageLoader
 
 env = Environment(loader=PackageLoader('adrender','templates'))
 
-MONITOR_HOST = "http://123.56.16.39"
-#MONITOR_HOST = "http://click.mtty.com"
+MONITOR_HOST = "http://click.mtty.com"
+#MONITOR_HOST = "http://10.111.32.15:10001"
 IMP_MONITOR_PATH = "/mt/show?"
 CLICK_MONITOR_PATH = "/mt/click?"
 IMP_MONITOR_ERROR = "/s_err.gif?"
@@ -40,6 +40,7 @@ def generate_click_url(req_dic, res_dic):
         para['aid'] = res_dic['aid'] if res_dic.has_key('aid') else ''
         para['pid'] = res_dic['pid'] if res_dic.has_key('pid') else ''
         para['cid'] = res_dic['cid'] if res_dic.has_key('cid') else ''
+        para['impid'] = res_dic['impid'] if res_dic.has_key('impid') else ''
         para['area'] = res_dic['area'] if res_dic.has_key('area') else ''
         para['rid'] = res_dic['rid'] if res_dic.has_key('rid') else ''
         para['t'] = req_dic['t']
@@ -103,9 +104,15 @@ def creatAdJsonBack(req_dic, res_dic):
         res_back['groupid'] = res_dic['gid'] if res_dic.has_key('gid') else ''
 
         '''ADD'''
-        res_back['adstype'] = '1'
         res_back['ctype'] = '1'
-
+        res_back['adstype'] = '1'
+        # ctype 1 
+        if res_dic.has_key('m_type') and res_dic['m_type'] == 'img':
+            res_back['ctype'] = '1'
+        if res_dic.has_key('m_type') and res_dic['m_type'] == 'flash':
+            res_back['ctype'] = '2'
+        if res_dic.has_key('m_type') and res_dic['m_type'] == 'mv':
+            res_back['ctype'] = '3'
 
         res_back['materials'] = list()
         res_back['materials'].append(res_dic['m_url'] if res_dic.has_key('m_url') else '')
@@ -122,3 +129,7 @@ def creatAdJsonBack(req_dic, res_dic):
     except Exception,e:
         logger.error(e)
         return call
+
+
+def defaultAdJsonBack():
+    return ''
