@@ -13,7 +13,7 @@ import random, time, os, sys
 
 uc_expires = 5000
 ad_expires = 1
-DOMAIN = '.istreamsche.com'
+DOMAIN = '.mtty.com'
 
 def urlsafe_b64encode(string):
     encoded = base64.urlsafe_b64encode(string)
