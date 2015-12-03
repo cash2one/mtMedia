@@ -36,8 +36,11 @@ class ClickHandler(tornado.web.RequestHandler):
     def initialize(self, broker):
         self.broker = broker
         self.cookiehandler = CookieHanlder(broker)
+        self.ob_msg_server = broker.msg_server
 
     def prepare(self):
+        self.set_header('Pragma', 'no-cache')
+        self.set_header("Cache-Control", 'no-cache,no-store,must-revalidate')
         self.set_header('P3P','CP="CURa ADMa DEVa PSAo PSDo OUR BUS UNI PUR INT DEM STA PRE COM NAV OTC NOI DSP COR"')
 
     def getIp(self):
@@ -49,7 +52,7 @@ class ClickHandler(tornado.web.RequestHandler):
         except Exception:
             pass
 
-    def recordClick():
+    def recordClick(self):
         self.broker.countercache.queueMsgPut( self.dic )
         self.ob_msg_server.sendMsgToStat(T_CLK, self.dic)
 
@@ -80,23 +83,31 @@ class ClickHandler(tornado.web.RequestHandler):
             logger.info('No Url')
         
 
-    @tornado.web.asynchronous
+    #@tornado.web.asynchronous
     #@gen.engine
-    @gen.coroutine
+    #@gen.coroutine
     def get(self):
         try:
             logger.debug("-------------CORE CLICK HANDLER----------------")
             self.dic = defaultdict()
             self.dic['type'] = INTER_MSG_CLICK
             self.dic['t'] = str( int(time.time()) )
+            self.dic['pid'] = self.get_argument("pid", default = 'test')
+            self.dic['eid'] = self.get_argument("eid", default = 'test')
+            self.dic['aid'] = self.get_argument("aid", default = 'test')
+            self.dic['area'] = self.get_argument("area", default = '0086-ffff-ffff')
+            self.dic['impid'] = self.get_argument("impid", default = '')
+            self.dic['rid'] = self.get_argument("rid", default = 'test')
             self.ucookie = self.get_cookie('uc')
             self.aurl = self.get_argument("url", default = None)
             self.getIp()
             self.dealCookie()
             self.dealRedirect()
+            self.recordClick()
             #print aurl
             logger.debug("-----------------------------------------------")
         except Exception, e:
-            self.dealRedirect()
+            logger.error(e)
+            #self.dealRedirect()
             return
 
