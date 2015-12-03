@@ -18,20 +18,6 @@ logger = logging.getLogger(__name__)
 CACHE_DUR_FREQ = 5
 
 
-'''
-Queue Info
-{   
-    'type':1  # 1 pv 2 click 3 cpa ...
-    'pid':xxx,
-}
-
-Cache info
-{
-
-}
-
-'''
-
 class CounterCache(threading.Thread):
     def __init__(self):
         threading.Thread.__init__(self)
@@ -104,7 +90,7 @@ class CounterCache(threading.Thread):
                 click_info_pid[pid] = click_info_pid[pid] + 1
                 click_info_eid[eid] = click_info_eid[eid] + 1
             else:
-                loggerr.warn("cacheInfoPut lose pid or eid:%r" % msg)
+                logger.warn("cacheInfoPut lose pid or eid:%r" % msg)
             #print cache
 
 
@@ -116,16 +102,29 @@ class CounterCache(threading.Thread):
             cache = self.m_Cache_A
 
         if cache.has_key('pid_info'):
-            for pid in cache['pid_info']['request'].iterkeys():
-                self.database.incPidRequest(pid, cache['pid_info']['request'][pid])
-                logger.debug("cacheDura:%s %r" % (pid, cache['pid_info']['request'][pid]))
-            #for pid in cache['pid_info']['request'].iterkeys():
-            #    self.database.incPidRequest(pid, cache['pid_info']['request'][pid])
+            pids = cache['pid_info']['request']
+            for pid in pids.iterkeys():
+                self.database.incPidRequest(pid, pids[pid])
+                logger.debug("cacheDura Pid Request:%s %r" % (pid, pids[pid]))
+            eids = cache['pid_info']['eid']
+            for eid in eids.iterkeys():
+                self.database.incEidShow(eid, eids[eid])
+                logger.debug("cacheDura Pid Show:%s %r" % (eid, eids[eid]))
 
-        if cache.has_key('aid_info'):
-            for aid in cache['aid_info']['exchange_price'].iterkeys():
-                self.database.incAdvBidSpend(aid, cache['aid_info']['exchange_price'][aid])
-                self.database.decAdvBidSpend(aid, "-%.3f" %  (float(cache['aid_info']['exchange_price'][aid])/1000))
+        if cache.has_key('click_info'):
+            pids = cache['click_info']['pid']
+            for pid in pids.iterkeys():
+                self.database.incPidClick(pid, pids[pid])
+                logger.debug("cacheDura Pid Click:%s %r" % (pid, pids[pid]))
+            eids = cache['click_info']['eid']
+            for eid in eids.iterkeys():
+                self.database.incEidClick(eid, eids[eid])
+                logger.debug("cacheDura Eid Click:%s %r" % (eid, eids[eid]))
+
+        #if cache.has_key('aid_info'):
+        #    for aid in cache['aid_info']['exchange_price'].iterkeys():
+        #        self.database.incAdvBidSpend(aid, cache['aid_info']['exchange_price'][aid])
+        #        self.database.decAdvBidSpend(aid, "-%.3f" %  (float(cache['aid_info']['exchange_price'][aid])/1000))
 
     def run(self):
         while True:
