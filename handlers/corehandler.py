@@ -16,7 +16,7 @@ from tornado import gen
 from handlers.cookiehandler import *
 import random, time, os, sys, socket
 from collections import defaultdict
-from adrender import defaultAdRender, creatAdRender, creatAdJsonBack
+from adrender import defaultAdRender, creatAdRender, creatAdJsonBack, defaultAdJsonBack
 from utils.general import INTER_MSG_SHOW
 from utils.general import random_str
 
@@ -54,6 +54,8 @@ class CoreHttpHandler(tornado.web.RequestHandler):
         self.ob_msg_server = broker.msg_server
 
     def prepare(self):
+        self.set_header('Pragma', 'no-cache')
+        self.set_header("Cache-Control", 'no-cache,no-store,must-revalidate')
         self.set_header('P3P','CP="CURa ADMa DEVa PSAo PSDo OUR BUS UNI PUR INT DEM STA PRE COM NAV OTC NOI DSP COR"')
 
     def getIp(self):
@@ -97,9 +99,9 @@ class CoreHttpHandler(tornado.web.RequestHandler):
     def customResult(self):
         self.set_header("Content-Type", "text/html")
         if self.res is None:
-            back = defaultAdRender()
+            back = defaultAdJsonBack()
         else:
-            self.res['impid'] = random_str()
+            self.dic['impid'] = self.res['impid'] = random_str()
             #back = creatAdRender(self.dic, self.res)
             back = creatAdJsonBack(self.dic, self.res)
         self.write(back)
@@ -123,10 +125,10 @@ class CoreHttpHandler(tornado.web.RequestHandler):
             self.dic['ad_h'] = self.get_argument("h", default = '250')
             self.getIp()
             self.dealCookie()
-            self.recordReq()
             #self.res = yield self.ob_dist.dist(self.dic)
             self.res = yield self.ob_requester.getAdReturn(self.dic)
             self.customResult()
+            self.recordReq()
             logger.info("---------------------------------------------")
             return
         except Exception, e:
