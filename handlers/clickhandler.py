@@ -108,6 +108,7 @@ class ClickHandler(tornado.web.RequestHandler):
             logger.debug("-----------------------------------------------")
         except Exception, e:
             logger.error(e)
+            self.redirect(self.aurl)
             #self.dealRedirect()
             return
 
