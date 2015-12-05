@@ -54,6 +54,7 @@ class Application(tornado.web.Application):
     def __init__(self, broker):
         handlers = [
             (r'/mt/media',CoreHttpHandler, dict(broker = broker)),
+            (r'/s',CoreHttpHandler, dict(broker = broker)),
             (r'/mt/click',ClickHandler, dict(broker = broker)),
             (r'/mt/mt.gif*',CoreHttpHandler, dict(broker = broker)),
             (r'/(.*)',DefaultHandler)

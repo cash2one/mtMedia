@@ -73,12 +73,12 @@ class CoreHttpHandler(tornado.web.RequestHandler):
             # cookie identify
             if not self.ucookie:
                 self.ucookie = self.cookiehandler.setCookie()
-                self.set_cookie("uc", self.ucookie, domain=DOMAIN, expires_days=uc_expires)
+                self.set_cookie("m", self.ucookie, domain=DOMAIN, expires_days=uc_expires)
             else:
                 if not self.cookiehandler.checkCookie(self.ucookie):
                     logger.error("UserCookie:%s is illegal!" % self.ucookie)
                     self.ucookie = self.cookiehandler.setCookie()
-                    self.set_cookie("uc", self.ucookie, domain=DOMAIN, expires_days=uc_expires)
+                    self.set_cookie("m", self.ucookie, domain=DOMAIN, expires_days=uc_expires)
             self.dic['gmuid'] = self.ucookie          
             logger.debug('cookie:%s' % self.dic['gmuid'])
         except Exception:
