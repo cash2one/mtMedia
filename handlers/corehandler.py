@@ -117,7 +117,7 @@ class CoreHttpHandler(tornado.web.RequestHandler):
             self.dic['type'] = INTER_MSG_SHOW
             self.dic['t'] = str( int(time.time()) )
             self.dic['rid'] = str(uuid.uuid1())
-            self.ucookie = self.get_cookie('uc')
+            self.ucookie = self.get_cookie('m')
             self.dic['callback_id'] = self.get_argument("callback", default = None)
             self.dic['pid'] = self.get_argument("pid", default = 'mm_10001328_4164206_13516084')
             

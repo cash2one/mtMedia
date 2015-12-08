@@ -98,7 +98,7 @@ class ClickHandler(tornado.web.RequestHandler):
             self.dic['area'] = self.get_argument("area", default = '0086-ffff-ffff')
             self.dic['impid'] = self.get_argument("impid", default = '')
             self.dic['rid'] = self.get_argument("rid", default = 'test')
-            self.ucookie = self.get_cookie('uc')
+            self.ucookie = self.get_cookie('m')
             self.aurl = self.get_argument("url", default = None)
             self.getIp()
             self.dealCookie()
