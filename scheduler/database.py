@@ -101,7 +101,7 @@ class Database(object):
                 self.switch()
                 today = self.today()
                 hour = self.hour()
-                key = "eid:show:%s:%s" % (today, pid)
+                key = "eid:show:%s:%s" % (today, eid)
                 self.red._hincrby(key, hour, num)
         except Exception,e:
             print e
