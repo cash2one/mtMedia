@@ -95,6 +95,7 @@ class Database(object):
                 self.red._hincrby(key, hour, num)
         except Exception,e:
             print e
+
     def incEidShow(self, eid, num):
         try:
             if eid :
@@ -102,7 +103,65 @@ class Database(object):
                 today = self.today()
                 hour = self.hour()
                 key = "eid:show:%s:%s" % (today, eid)
-                self.red._hincrby(key, hour, num)
+                self.red._hincrby(key, hour, int(num))
+        except Exception,e:
+            print e
+
+    def incEidHourSp(self, eid, num):
+        try:
+            if eid :
+                self.switch()
+                today = self.today()
+                hour = self.hour()
+                key = "eid:hourspend:%s:%s" % (today, eid)
+                self.red._hincrby(key, hour, int(num))
+        except Exception,e:
+            print e
+
+    def incAidHourSp(self, aid, num):
+        try:
+            if aid :
+                self.switch()
+                today = self.today()
+                hour = self.hour()
+                key = "adv:hourspend:%s:%s" % (today, aid)
+                self.red._hincrby(key, hour, int(num))
+        except Exception,e:
+            print e
+
+    def decAdvBidSpend(self, aid, num):
+        try:
+            if aid :
+                self.switch()
+                key = "adv:cash:%s" % (aid,)
+                self.red._decbyfloat(key, num)
+        except Exception,e:
+            print e
+
+    def incPidImpression(self, eid, pid):
+        try:
+            self.switch()
+            today = self.today()
+            key = "exec:impression:pid:%s:%s" % (today, eid)
+            return self.red._hincr(key, pid)
+        except Exception,e:
+            print e
+
+    def incEidPidClick(self, eid, pid):
+        try:
+            self.switch()
+            today = self.today()
+            key = "exec:click:pid:%s:%s" % (today, eid)
+            return self.red._hincr(key, pid)
+        except Exception,e:
+            print e
+
+    def incPidExPrice(self, eid, pid, price):
+        try:
+            self.switch()
+            today = self.today()
+            key = "exec:exchangeprice:pid:%s:%s" % (today, eid)
+            return self.red._hincrby(key, pid, price)
         except Exception,e:
             print e
 
@@ -180,3 +239,40 @@ class Database(object):
         except Exception, e:
             print e
             return 0
+
+    def setUserClickInfo(self, key, field, value):
+        try:
+            tm = 7776000 # 90*24*60*60
+            self.switch()
+            self.red._hset(key, field, value)
+            return self.red._expire(key, tm)
+        except Exception, e:
+            print e
+            return 0
+
+    def getSourceIDInfo(self, source_id):
+        try:
+            self.switch()
+            key = "click:source:%s" % source_id
+            self.red._get(key)
+        except Exception, e:
+            print e
+
+    def setSourceIDInfo(self, source_id, value):
+        try:
+            tm = 7776000 # 90*24*60*60
+            self.switch()
+            key = "click:source:%s" % source_id
+            self.red._set(key, value)
+            return self.red._expire(key, tm)
+        except Exception, e:
+            print 'getSourceIDInfo:%s' % e
+            return 0
+
+    def getCreateInfo(self, cid):
+        try:
+            self.switch()
+            key_1 = "cid:detail:%s" % cid
+            return self.red._get(key_1)
+        except Exception, e:
+            print e

@@ -10,7 +10,7 @@ from tornado.queues import Queue
 from tornado.ioloop import  IOLoop
 import tornado.gen
 
-from utils.general import INTER_MSG_SHOW, INTER_MSG_CLICK
+from utils.general import INTER_MSG_SHOW, INTER_MSG_CLICK, INTER_MSG_REQUEST
 
 import logging
 logger = logging.getLogger(__name__)
@@ -53,7 +53,8 @@ class CounterCache(threading.Thread):
             self.cacheInit(self.m_Cache_A)
 
     def cacheInit(self, cache):
-        cache['pid_info'] = { 'request':defaultdict(int), 'response':defaultdict(int), 'eid':defaultdict(int)}
+        cache['pid_info'] = { 'request':defaultdict(int), 'response':defaultdict(int),}
+        cache['eid_info'] = { 'pv':defaultdict(int), }
         cache['click_info'] = { 'pid':defaultdict(int), 'eid':defaultdict(int) }
 
     @tornado.gen.coroutine
@@ -70,15 +71,16 @@ class CounterCache(threading.Thread):
 
     def cacheInfoPut(self, msg):
         cache = self.switchCache()
-        if msg.has_key('type') and msg['type'] == INTER_MSG_SHOW:
+        if msg.has_key('type') and msg['type'] == INTER_MSG_REQUEST:
             if msg.has_key('pid'):
                 pid = msg['pid']
                 pid_request = cache['pid_info']['request']
                 pid_request[pid] = pid_request[pid] + 1
 
+        if msg.has_key('type') and msg['type'] == INTER_MSG_SHOW:
             if msg.has_key('eid'):
                 eid = msg['eid']
-                imp_info_eid = cache['pid_info']['eid']
+                imp_info_eid = cache['eid_info']['pv']
                 imp_info_eid[eid] = imp_info_eid[eid] + 1
 
         if msg.has_key('type') and msg['type'] == INTER_MSG_CLICK:
@@ -106,10 +108,12 @@ class CounterCache(threading.Thread):
             for pid in pids.iterkeys():
                 self.database.incPidRequest(pid, pids[pid])
                 logger.debug("cacheDura Pid Request:%s %r" % (pid, pids[pid]))
-            eids = cache['pid_info']['eid']
+
+        if cache.has_key('eid_info'):
+            eids = cache['eid_info']['pv']
             for eid in eids.iterkeys():
                 self.database.incEidShow(eid, eids[eid])
-                logger.debug("cacheDura Pid Show:%s %r" % (eid, eids[eid]))
+                logger.debug("cacheDura Eid Show:%s %r" % (eid, eids[eid]))
 
         if cache.has_key('click_info'):
             pids = cache['click_info']['pid']

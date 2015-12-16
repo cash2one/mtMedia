@@ -21,6 +21,7 @@ import random, time, os, sys, socket
 from handlers.corehandler import *
 from handlers.clickhandler import *
 from scheduler.countercache import *
+from scheduler.createcache import *
 from scheduler.distributor import Distributor, Requester
 from tornado.ioloop import  IOLoop
 from utils.kfconnect import KafkaCon
@@ -95,6 +96,7 @@ class Broker(object):
         self.path = ''
         self.server_port = None
         self.countercache = CounterCache()
+        self.createcache =  CreateCache()
         self.dist = Distributor()
         self.requester = Requester()
         self.msg_server = KafkaCon()

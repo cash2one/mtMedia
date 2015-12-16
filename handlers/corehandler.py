@@ -16,9 +16,8 @@ from tornado import gen
 from handlers.cookiehandler import *
 import random, time, os, sys, socket
 from collections import defaultdict
-from adrender import defaultAdRender, creatAdRender, creatAdJsonBack, defaultAdJsonBack
-from utils.general import INTER_MSG_SHOW
-from utils.general import random_str
+from adrender import creatSspAdBack, defaultAdJsonBack
+from utils.general import *
 
 import logging
 logger = logging.getLogger(__name__)
@@ -31,6 +30,10 @@ finally:
 
 REFERER = 'Referer'
 USER_AGENT = 'User-Agent'
+
+PID_CONFIG = {
+"mm_10001328_4164206_13516084":{'w':'300', 'h':'250'},
+}
 
 def urlsafe_b64encode(string):
     encoded = base64.urlsafe_b64encode(string)
@@ -86,11 +89,42 @@ class CoreHttpHandler(tornado.web.RequestHandler):
 
     def recordReq(self):
         self.broker.countercache.queueMsgPut( self.dic )
-        self.ob_msg_server.sendMsgToStat(T_IMP, self.dic)
+        self.ob_msg_server.sendMsgToStat(T_REQ, self.dic)
         pass
 
     def recordRes(self):
+        self.broker.countercache.queueMsgPut( self.res )
+        self.ob_msg_server.sendMsgToStat(T_IMP, self.dic)
         pass
+
+    def checkJsonback(self):
+        try:
+            if self.dic.has_key('callback_id'):
+                j = self.dic['callback_id']
+                j_list = j.split('_')
+                if len(j_list) == 3:
+                    if is_num_by_except(j_list[2]):
+                        return True
+                logger.warn('Error JsonBackID:%r' % j)
+            return False
+        except Exception,e:
+            logger.error(e)
+            return False
+
+    def getPidDetail(self):
+        try:
+            if self.dic.has_key(PARA_KEY_PID):
+                pid = self.dic[PARA_KEY_PID]
+                if PID_CONFIG.has_key(pid):
+                    detail = PID_CONFIG[pid]
+                    self.dic[PARA_KEY_WIDTH] = detail['w']
+                    self.dic[PARA_KEY_HEIGHT] = detail['h']
+                    return True
+            logger.warn('No Pid In List!')
+            return False
+        except Exception,e:
+            logger.error(e)
+            return False
 
     def returnGif(self):
         self.set_header('Content-Type', 'image/gif')
@@ -101,9 +135,7 @@ class CoreHttpHandler(tornado.web.RequestHandler):
         if self.res is None:
             back = defaultAdJsonBack()
         else:
-            self.dic['impid'] = self.res['impid'] = random_str()
-            #back = creatAdRender(self.dic, self.res)
-            back = creatAdJsonBack(self.dic, self.res)
+            back = creatSspAdBack(self.dic, self.res)
         self.write(back)
         self.finish()
 
@@ -114,21 +146,26 @@ class CoreHttpHandler(tornado.web.RequestHandler):
         try:
             logger.debug("-------------CORE HTTP HANDLER----------------")
             self.dic = defaultdict()
-            self.dic['type'] = INTER_MSG_SHOW
+            self.dic['type'] = INTER_MSG_REQUEST
             self.dic['t'] = str( int(time.time()) )
-            self.dic['rid'] = str(uuid.uuid1())
+            #self.dic[PARA_KEY_RID] = str(uuid.uuid1())
             self.ucookie = self.get_cookie('m')
             self.dic['callback_id'] = self.get_argument("callback", default = None)
-            self.dic['pid'] = self.get_argument("pid", default = 'mm_10001328_4164206_13516084')
-            
-            self.dic['ad_w'] = self.get_argument("w", default = '300')
-            self.dic['ad_h'] = self.get_argument("h", default = '250')
-            self.getIp()
-            self.dealCookie()
-            #self.res = yield self.ob_dist.dist(self.dic)
-            self.res = yield self.ob_requester.getAdReturn(self.dic)
+            self.dic[PARA_KEY_PID] = self.get_argument("pid", default = 'mm_10001328_4164206_13516084')
+            if self.checkJsonback() and self.getPidDetail():
+                self.getIp()
+                self.dealCookie()
+                #self.res = yield self.ob_dist.dist(self.dic)
+                self.res = yield self.ob_requester.getAdReturn(self.dic)
+                #self.dic[PARA_KEY_RID] = self.res[PARA_KEY_RID] = random_str()
+                if self.res:
+                    self.dic[PARA_KEY_RID] = self.res[PARA_KEY_RID] = str(uuid.uuid1())
+                    self.res['type'] = INTER_MSG_SHOW
+                    self.recordRes()
+
+                self.recordReq()
+
             self.customResult()
-            self.recordReq()
             logger.info("---------------------------------------------")
             return
         except Exception, e:
