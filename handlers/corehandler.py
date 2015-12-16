@@ -150,7 +150,7 @@ class CoreHttpHandler(tornado.web.RequestHandler):
             self.dic['t'] = str( int(time.time()) )
             #self.dic[PARA_KEY_RID] = str(uuid.uuid1())
             self.ucookie = self.get_cookie('m')
-            self.dic['callback_id'] = self.get_argument("callback", default = None)
+            self.dic['callback_id'] = self.get_argument("callback", default = '')
             self.dic[PARA_KEY_PID] = self.get_argument("pid", default = 'mm_10001328_4164206_13516084')
             if self.checkJsonback() and self.getPidDetail():
                 self.getIp()
