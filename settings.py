@@ -35,11 +35,12 @@ MULT_PROCESS_MODEL = False
 REDISEVER = (("192.168.1.1",6379),)
 
 ''' MSG SERVER '''
-MSG_SERVER = ('192.168.1.4',9092)
+MSG_SERVER = ('192.168.1.5',9092)
 PART_NUM = 1
 SENDMSG = True
 
 ''' Topic '''
+T_REQ = "test"
 T_IMP = "test"
 T_CLK = "test"
 T_ACT = "test"
