@@ -141,48 +141,50 @@ def creatSspAdBack( req_dic, res_dic ):
     try:
         res_back = defaultdict()
         template = env.get_template("html_2.html")
+        call = req_dic['callback_id'] if req_dic.has_key('callback_id') else ''
         res_back['pid'] = req_dic[PARA_KEY_PID] if req_dic.has_key(PARA_KEY_PID) else ''
         res_back['width'] = req_dic[PARA_KEY_WIDTH] if req_dic.has_key(PARA_KEY_WIDTH) else ''
         res_back['height'] = req_dic[PARA_KEY_HEIGHT] if req_dic.has_key(PARA_KEY_HEIGHT) else ''
         res_back['width'] = '300'
         res_back['height'] = '250'
         res_back['impid'] = req_dic[PARA_KEY_RID] if req_dic.has_key(PARA_KEY_RID) else ''
-        res_back['advid'] = res_dic['aid'] if res_dic.has_key('aid') else ''
+        res_back['advid'] = res_dic[PARA_KEY_ADVID] if res_dic.has_key(PARA_KEY_ADVID) else ''
         res_back['unid'] = req_dic[PARA_KEY_ADX] if req_dic.has_key(PARA_KEY_ADX) else ''
         res_back['plid'] = ''
-        res_back['gpid'] = res_dic['eid'] if res_dic.has_key('eid') else ''
-        res_back['cid'] = res_dic['cid'] if res_dic.has_key('cid') else ''
-        res_back['arid'] = res_dic['area'] if res_dic.has_key('area') else ''
+        res_back['gpid'] = res_dic[PARA_KEY_EID] if res_dic.has_key(PARA_KEY_EID) else ''
+        res_back['cid'] = res_dic[PARA_KEY_CID] if res_dic.has_key(PARA_KEY_CID) else ''
+        res_back['arid'] = res_dic[PARA_KEY_AREAID] if res_dic.has_key(PARA_KEY_AREAID) else ''
         res_back['xcurl'] = ''
         res_back['logo'] = 'true'
         '''ADD'''
         res_back['ctype'] = '1'
         res_back['adstype'] = '1'
         # ctype 1
-        if res_dic.has_key('m_type'):
-            t = res_dic.has_key('m_type')
+        if res_dic.has_key(CRT_KEY_TYPE):
+            t = res_dic.has_key(CRT_KEY_TYPE)
             if t == 'img': res_back['ctype'] = '1'
             if t == 'flash': res_back['ctype'] = '2'
             if t == 'mv': res_back['ctype'] = '3'
 
         ''' monitor url '''
-        res_back['tview'] = res_dic['monitor_url'] if res_dic.has_key('monitor_url') else ''
+        res_back['tview'] = res_dic[CRT_KEY_MONITOR_URL] if res_dic.has_key(CRT_KEY_MONITOR_URL) else ''
 
         res_back['mtls'] = list()
         #if create_dic.has_key(CRT_KEY_MATERIALS):
         #for m in create_dic[CRT_KEY_MATERIALS]:
         materail = defaultdict()
-	materail['p0'] = res_dic['m_url'] if res_dic.has_key('m_url') else ''
-	materail['p1'] = res_dic['click_url'] if res_dic.has_key('click_url') else ''
+	materail['p0'] = res_dic[CRT_KEY_URL] if res_dic.has_key(CRT_KEY_URL) else ''
+	materail['p1'] = res_dic[CRT_KEY_CLICK_URL] if res_dic.has_key(CRT_KEY_CLICK_URL) else ''
 	materail['p2'] = '000'
 	materail['p3'] = req_dic[PARA_KEY_WIDTH] if req_dic.has_key(PARA_KEY_WIDTH) else ''
 	materail['p4'] = req_dic[PARA_KEY_HEIGHT] if req_dic.has_key(PARA_KEY_HEIGHT) else ''
 	res_back['mtls'].append(materail)
-        logger.debug(res_back)
         html = template.render(ad = res_back)
         #j_back = "%s(%s)" % (call, str( json.dumps(res_back) ))
+        j_back = "%s(%s)" % (call, str(html))
+        logger.debug(j_back)
         #j_back = "%s" %  str( json.dumps(res_back) )
-        return html
+        return j_back
     except Exception, e:
         print e
         pass

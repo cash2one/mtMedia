@@ -82,8 +82,8 @@ class CoreHttpHandler(tornado.web.RequestHandler):
                     logger.error("UserCookie:%s is illegal!" % self.ucookie)
                     self.ucookie = self.cookiehandler.setCookie()
                     self.set_cookie("m", self.ucookie, domain=DOMAIN, expires_days=uc_expires)
-            self.dic['gmuid'] = self.ucookie          
-            logger.debug('cookie:%s' % self.dic['gmuid'])
+            self.dic[PARA_KEY_USER] = self.ucookie          
+            logger.debug('cookie:%s' % self.dic[PARA_KEY_USER])
         except Exception:
             pass  
 
@@ -94,7 +94,7 @@ class CoreHttpHandler(tornado.web.RequestHandler):
 
     def recordRes(self):
         self.broker.countercache.queueMsgPut( self.res )
-        self.ob_msg_server.sendMsgToStat(T_IMP, self.dic)
+        self.ob_msg_server.sendMsgToStat(T_IMP, self.res)
         pass
 
     def checkJsonback(self):
@@ -161,6 +161,7 @@ class CoreHttpHandler(tornado.web.RequestHandler):
                 if self.res:
                     self.dic[PARA_KEY_RID] = self.res[PARA_KEY_RID] = str(uuid.uuid1())
                     self.res['type'] = INTER_MSG_SHOW
+                    self.res[PARA_KEY_USER] = self.dic[PARA_KEY_USER]
                     self.recordRes()
 
                 self.recordReq()
