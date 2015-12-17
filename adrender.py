@@ -161,10 +161,13 @@ def creatSspAdBack( req_dic, res_dic ):
         res_back['adstype'] = '1'
         # ctype 1
         if res_dic.has_key(CRT_KEY_TYPE):
-            t = res_dic.has_key(CRT_KEY_TYPE)
-            if t == 'img': res_back['ctype'] = '1'
-            if t == 'flash': res_back['ctype'] = '2'
-            if t == 'mv': res_back['ctype'] = '3'
+            t = res_dic[CRT_KEY_TYPE]
+            if t == 'img': 
+                res_back['ctype'] = '1'
+            if t == 'flash': 
+                res_back['ctype'] = '2'
+            if t == 'mv': 
+                res_back['ctype'] = '3'
 
         ''' monitor url '''
         res_back['tview'] = res_dic[CRT_KEY_MONITOR_URL] if res_dic.has_key(CRT_KEY_MONITOR_URL) else ''
