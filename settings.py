@@ -33,6 +33,7 @@ MULT_PROCESS_MODEL = False
 
 ''' Redis For adServer '''
 REDISEVER = (("192.168.1.1",6379),)
+CONFIG_REDISEVER = (("192.168.1.1",6379),)
 
 ''' MSG SERVER '''
 MSG_SERVER = ('192.168.1.5',9092)
