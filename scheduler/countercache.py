@@ -78,11 +78,12 @@ class CounterCache(threading.Thread):
                 pid_request[pid] = pid_request[pid] + 1
 
         if msg.has_key('type') and msg['type'] == INTER_MSG_SHOW:
-            if msg.has_key('eid'):
-                eid = msg['eid']
+            if msg.has_key('executeid'):
+                eid = msg['executeid']
                 imp_info_eid = cache['eid_info']['pv']
                 imp_info_eid[eid] = imp_info_eid[eid] + 1
 
+        '''
         if msg.has_key('type') and msg['type'] == INTER_MSG_CLICK:
             if msg.has_key('pid') and msg.has_key('eid'):
                 pid = msg['pid']
@@ -94,7 +95,7 @@ class CounterCache(threading.Thread):
             else:
                 logger.warn("cacheInfoPut lose pid or eid:%r" % msg)
             #print cache
-
+        '''
 
     def cacheDura(self):
         cache = None
