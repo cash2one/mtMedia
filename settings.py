@@ -20,7 +20,7 @@ DEVICE_ID = '01'
 SERVER_PORT = [10001,10008]
 
 ''' Ad Core 配置'''
-AD_CORE_SERVER = "http://127.0.0.1:8899/tbid"
+AD_CORE_SERVER = "http://127.0.0.1/tbid"
 
 
 ''' 流量分发器配置 '''
