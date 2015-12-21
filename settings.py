@@ -20,7 +20,7 @@ DEVICE_ID = '01'
 SERVER_PORT = [10001,10008]
 
 ''' Ad Core 配置'''
-AD_CORE_SERVER = "http://127.0.0.1/tbid"
+AD_CORE_SERVER = "http://127.0.0.1/"
 
 
 ''' 流量分发器配置 '''
@@ -32,8 +32,7 @@ DISTRIBUTOR_TIME = 500
 MULT_PROCESS_MODEL = False
 
 ''' Redis For adServer '''
-REDISEVER = (("192.168.1.1",6379),)
-CONFIG_REDISEVER = (("192.168.1.1",6379),)
+REDISEVER = (("192.168.1.5",6379),)
 
 ''' MSG SERVER '''
 MSG_SERVER = ('192.168.1.5',9092)

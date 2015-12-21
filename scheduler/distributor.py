@@ -7,7 +7,7 @@ from tornado import gen
 from settings import DISTRIBUTOR_SERVER
 from settings import DISTRIBUTOR_TIME
 from settings import AD_CORE_SERVER
-from utils.general import SOCK
+from utils.general import *
 from requests.exceptions import *
 
 import logging
@@ -36,7 +36,13 @@ class Requester():
     def getAdReturn(self, dic):
         try:
             #print dic
-            res = self.session.post(ADSERVER, json = dic, timeout = float(DISTRIBUTOR_TIME)/1000)
+            if dic.has_key(PARA_KEY_ISMOBILE):
+                if dic[PARA_KEY_ISMOBILE]:
+                    bid_url = ADSERVER + 'mtMbid'
+                else:
+                    bid_url = ADSERVER + 'mtPbid'
+            #print bid_url
+            res = self.session.post(bid_url, json = dic, timeout = float(DISTRIBUTOR_TIME)/1000)
             #print dir(res)
             raise gen.Return()
         except gen.Return as res_info:

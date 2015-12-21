@@ -32,7 +32,9 @@ REFERER = 'Referer'
 USER_AGENT = 'User-Agent'
 
 PID_CONFIG = {
-"mm_10001328_4164206_13516084":{'w':'300', 'h':'250'},
+"mm_10001328_4164206_13516084":{'w':'300', 'h':'250', 'flowtype':'0'},
+"144105":{'w':'580','h':'120', 'flowtype':'2'},
+"119196":{'w':'300','h':'250', 'flowtype':'0'},
 }
 
 def urlsafe_b64encode(string):
@@ -119,6 +121,13 @@ class CoreHttpHandler(tornado.web.RequestHandler):
                     detail = PID_CONFIG[pid]
                     self.dic[PARA_KEY_WIDTH] = detail['w']
                     self.dic[PARA_KEY_HEIGHT] = detail['h']
+                    self.dic['flowtype'] = detail['flowtype']
+                    if self.dic['flowtype'] == F_TYPE_MOBILE:
+                        self.dic[PARA_KEY_ISMOBILE] = True
+                        self.dic[PARA_KEY_ADX] = '99'
+                    else:
+                        self.dic[PARA_KEY_ISMOBILE] = False
+                        self.dic[PARA_KEY_ADX] = '98'
                     return True
             logger.warn('No Pid In List!')
             return False
@@ -162,6 +171,7 @@ class CoreHttpHandler(tornado.web.RequestHandler):
                     self.dic[PARA_KEY_RID] = self.res[PARA_KEY_RID] = str(uuid.uuid1())
                     self.res['type'] = INTER_MSG_SHOW
                     self.res[PARA_KEY_USER] = self.dic[PARA_KEY_USER]
+                    self.res[PARA_KEY_ADX] = self.dic[PARA_KEY_ADX]
                     self.recordRes()
 
                 self.recordReq()
