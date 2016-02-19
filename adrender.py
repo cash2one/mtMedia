@@ -18,6 +18,8 @@ CLICK_MONITOR_ERROR = "/c_err.gif?"
 import logging
 logger = logging.getLogger(__name__)
 
+G_template = env.get_template("html_2.html")
+
 def generate_imp_url(req_dic, res_dic):
     try:
         para = defaultdict()
@@ -140,7 +142,8 @@ def defaultAdJsonBack():
 def creatSspAdBack( req_dic, res_dic ):
     try:
         res_back = defaultdict()
-        template = env.get_template("html_2.html")
+        #template = env.get_template("html_2.html")
+        template = G_template
         call = req_dic['callback_id'] if req_dic.has_key('callback_id') else ''
         res_back['pid'] = req_dic[PARA_KEY_PID] if req_dic.has_key(PARA_KEY_PID) else ''
         res_back['width'] = req_dic[PARA_KEY_WIDTH] if req_dic.has_key(PARA_KEY_WIDTH) else ''

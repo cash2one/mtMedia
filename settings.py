@@ -20,22 +20,23 @@ DEVICE_ID = '01'
 SERVER_PORT = [10001,10008]
 
 ''' Ad Core 配置'''
-AD_CORE_SERVER = "http://127.0.0.1/"
+AD_CORE_SERVER = "http://192.168.2.15:20007/"
 
 
 ''' 流量分发器配置 '''
 DISTRIBUTOR_SERVER = [("127.0.0.1",9000), ("127.0.0.1",9000)]
 
 ''' 超时设置 单位毫秒 '''
-DISTRIBUTOR_TIME = 500
+DISTRIBUTOR_TIME = 50
 
 MULT_PROCESS_MODEL = False
 
 ''' Redis For adServer '''
-REDISEVER = (("192.168.1.5",6379),)
+REDISEVER = (("08dce178449f48fb.m.cnbja.kvstore.aliyuncs.com",6379),)
+STATUS_REDIS_PASS = "08dce178449f48fb:MtqweBNM789"
 
 ''' MSG SERVER '''
-MSG_SERVER = ('192.168.1.5',9092)
+MSG_SERVER = ('192.168.2.51',9092)
 PART_NUM = 1
 SENDMSG = True
 

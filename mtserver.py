@@ -153,7 +153,6 @@ if __name__ == '__main__':
         broker = Broker()
         broker.path = path
         broker.server_port = int(sys.argv[1])
-        
         broker.pid = os.getpid()
         if not MULT_PROCESS_MODEL:
             broker.pid_file_init()

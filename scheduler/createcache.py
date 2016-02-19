@@ -13,7 +13,7 @@ logger = logging.getLogger(__name__)
 
 class CreateCache():
     def __init__(self):
-        self.database = Database(redis_conf = REDISEVER)
+        self.database = Database(redis_conf = REDISEVER, password = STATUS_REDIS_PASS)
 
     def getCreateDetail(self, cid):
         try:

@@ -33,8 +33,8 @@ class KafkaCon():
         try:
             if settings.SENDMSG:    
                 self.stat_con = KafkaClient(self.msg_stat_server[0] +':' + str(self.msg_stat_server[1])) 
-                request_producer = Producer(self.stat_con,  async=False)
-                show_producer = Producer(self.stat_con,  async=False)
+                request_producer = Producer(self.stat_con,  async=True)
+                show_producer = Producer(self.stat_con,  async=True)
                 click_producer = Producer(self.stat_con, async=False)
                 action_producer = Producer(self.stat_con,  async=False)
 

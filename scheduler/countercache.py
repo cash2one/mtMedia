@@ -27,7 +27,7 @@ class CounterCache(threading.Thread):
         self.m_Cache_A = defaultdict()
         self.m_Cache_B = defaultdict()
 
-        self.database = Database(redis_conf = REDISEVER)
+        self.database = Database(redis_conf = REDISEVER, password = STATUS_REDIS_PASS)
 
         self.cacheInit(self.m_Cache_A)
         self.cacheInit(self.m_Cache_B)
@@ -54,8 +54,9 @@ class CounterCache(threading.Thread):
 
     def cacheInit(self, cache):
         cache['pid_info'] = { 'request':defaultdict(int), 'response':defaultdict(int),}
-        cache['eid_info'] = { 'pv':defaultdict(int), }
+        cache['eid_info'] = { 'pv':defaultdict(int), 'exchange_price':defaultdict(int) }
         cache['click_info'] = { 'pid':defaultdict(int), 'eid':defaultdict(int) }
+        cache['aid_info'] = { 'exchange_price':defaultdict(int) }
 
     @tornado.gen.coroutine
     def queueMsgPut(self, msg):
@@ -78,10 +79,19 @@ class CounterCache(threading.Thread):
                 pid_request[pid] = pid_request[pid] + 1
 
         if msg.has_key('type') and msg['type'] == INTER_MSG_SHOW:
+            price = 0
+            if msg.has_key('price'):
+                price = int(msg['price'])
             if msg.has_key('executeid'):
                 eid = msg['executeid']
                 imp_info_eid = cache['eid_info']['pv']
+                imp_info_price = cache['eid_info']['exchange_price']
                 imp_info_eid[eid] = imp_info_eid[eid] + 1
+                imp_info_price[eid] = imp_info_price[eid] + price
+            if msg.has_key('advid'):
+                aid = msg['advid']
+                imp_info_aid = cache['aid_info']['exchange_price']
+                imp_info_aid[aid] = imp_info_aid[aid] + price
 
         '''
         if msg.has_key('type') and msg['type'] == INTER_MSG_CLICK:
@@ -112,9 +122,20 @@ class CounterCache(threading.Thread):
 
         if cache.has_key('eid_info'):
             eids = cache['eid_info']['pv']
+            it_p = cache['eid_info']['exchange_price']
             for eid in eids.iterkeys():
                 self.database.incEidShow(eid, eids[eid])
                 logger.debug("cacheDura Eid Show:%s %r" % (eid, eids[eid]))
+            for eid in it_p.iterkeys():
+                self.database.incEidHourSp(eid, it_p[eid])
+                logger.debug("increase Order:%r Money:%r OK!" % (eid, it_p[eid]))
+
+        if cache.has_key('aid_info'):
+            it_a = cache['aid_info']['exchange_price']
+            for aid in it_a.iterkeys():
+                self.database.incAidHourSp(aid, it_a[aid])
+                self.database.decAdvBidSpend(aid, "-%.3f" %  (float(it_a[aid])/1000))
+                logger.debug("increase Advertiser:%s Money:%s!" % (aid, str(float(it_a[aid])/1000)) )
 
         if cache.has_key('click_info'):
             pids = cache['click_info']['pid']

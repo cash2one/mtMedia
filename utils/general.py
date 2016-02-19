@@ -4,6 +4,11 @@ import socket
 from random import Random
 from settings import *
 
+''' flow type'''
+F_TYPE_PC = '0'
+F_TYPE_VIDEO = '1'
+F_TYPE_MOBILE = '2'
+
 '''area'''
 DEFAULT_AREA = "0086-ffff-ffff"
 
@@ -42,6 +47,7 @@ PARA_KEY_AREA = 'areaid'
 PARA_KEY_XCURL = 'xcurl'
 PARA_KEY_REF = 'referer'
 PARA_KEY_SOURCEID = 'click_sourceid'
+PARA_KEY_ISMOBILE = 'is_mobile'
 
 ''' creative keys '''
 CRT_KEY_TYPE = "m_type"
