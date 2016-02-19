@@ -118,34 +118,34 @@ class CounterCache(threading.Thread):
             pids = cache['pid_info']['request']
             for pid in pids.iterkeys():
                 self.database.incPidRequest(pid, pids[pid])
-                logger.debug("cacheDura Pid Request:%s %r" % (pid, pids[pid]))
+                logger.info("cacheDura Pid Request:%s %r" % (pid, pids[pid]))
 
         if cache.has_key('eid_info'):
             eids = cache['eid_info']['pv']
             it_p = cache['eid_info']['exchange_price']
             for eid in eids.iterkeys():
                 self.database.incEidShow(eid, eids[eid])
-                logger.debug("cacheDura Eid Show:%s %r" % (eid, eids[eid]))
+                logger.info("cacheDura Eid Show:%s %r" % (eid, eids[eid]))
             for eid in it_p.iterkeys():
                 self.database.incEidHourSp(eid, it_p[eid])
-                logger.debug("increase Order:%r Money:%r OK!" % (eid, it_p[eid]))
+                logger.info("increase Order:%r Money:%r OK!" % (eid, it_p[eid]))
 
         if cache.has_key('aid_info'):
             it_a = cache['aid_info']['exchange_price']
             for aid in it_a.iterkeys():
                 self.database.incAidHourSp(aid, it_a[aid])
                 self.database.decAdvBidSpend(aid, "-%.3f" %  (float(it_a[aid])/1000))
-                logger.debug("increase Advertiser:%s Money:%s!" % (aid, str(float(it_a[aid])/1000)) )
+                logger.info("increase Advertiser:%s Money:%s!" % (aid, str(float(it_a[aid])/1000)) )
 
         if cache.has_key('click_info'):
             pids = cache['click_info']['pid']
             for pid in pids.iterkeys():
                 self.database.incPidClick(pid, pids[pid])
-                logger.debug("cacheDura Pid Click:%s %r" % (pid, pids[pid]))
+                logger.info("cacheDura Pid Click:%s %r" % (pid, pids[pid]))
             eids = cache['click_info']['eid']
             for eid in eids.iterkeys():
                 self.database.incEidClick(eid, eids[eid])
-                logger.debug("cacheDura Eid Click:%s %r" % (eid, eids[eid]))
+                logger.info("cacheDura Eid Click:%s %r" % (eid, eids[eid]))
 
         #if cache.has_key('aid_info'):
         #    for aid in cache['aid_info']['exchange_price'].iterkeys():

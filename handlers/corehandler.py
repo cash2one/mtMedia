@@ -32,20 +32,20 @@ REFERER = 'Referer'
 USER_AGENT = 'User-Agent'
 
 PID_CONFIG = {
-"mm_10001328_4164206_13516084":{'w':'300', 'h':'250', 'flowtype':'0'},
-"144106":{'w':'300', 'h':'250', 'flowtype':'0'},
-"144105":{'w':'580','h':'120', 'flowtype':'2'},
-"119196":{'w':'300','h':'250', 'flowtype':'0'},
-"144107":{'w':'300','h':'50', 'flowtype':'0'},
-"144108":{'w':'610','h':'100', 'flowtype':'0'},
-"144109":{'w':'300','h':'100', 'flowtype':'0'},
-"144110":{'w':'300','h':'250', 'flowtype':'0'},
-"144111":{'w':'640','h':'90', 'flowtype':'0'},
-"144112":{'w':'840','h':'100', 'flowtype':'0'},
-"144113":{'w':'300','h':'50', 'flowtype':'0'},
-"144116":{'w':'300','h':'250', 'flowtype':'0'},
-"144119":{'w':'300','h':'50', 'flowtype':'0'},
-"144120":{'w':'300','h':'250', 'flowtype':'0'}
+"mm_10001328_4164206_13516084":{'w':'300', 'h':'250', 'flowtype':'0', 'floor':'200'},
+"144106":{'w':'300', 'h':'250', 'flowtype':'0', 'floor':'200'},
+"144105":{'w':'580','h':'120', 'flowtype':'2', 'floor':'200'},
+"119196":{'w':'300','h':'250', 'flowtype':'0', 'floor':'200'},
+"144107":{'w':'300','h':'50', 'flowtype':'0', 'floor':'200'},
+"144108":{'w':'610','h':'100', 'flowtype':'0', 'floor':'200'},
+"144109":{'w':'300','h':'100', 'flowtype':'0', 'floor':'200'},
+"144110":{'w':'300','h':'250', 'flowtype':'0', 'floor':'200'},
+"144111":{'w':'640','h':'90', 'flowtype':'0', 'floor':'200'},
+"144112":{'w':'840','h':'100', 'flowtype':'0', 'floor':'200'},
+"144113":{'w':'300','h':'50', 'flowtype':'0', 'floor':'200'},
+"144116":{'w':'300','h':'250', 'flowtype':'0', 'floor':'200'},
+"144119":{'w':'300','h':'50', 'flowtype':'0', 'floor':'200'},
+"144120":{'w':'300','h':'250', 'flowtype':'0', 'floor':'200'}
 }
 
 def urlsafe_b64encode(string):
@@ -133,6 +133,7 @@ class CoreHttpHandler(tornado.web.RequestHandler):
                     self.dic[PARA_KEY_WIDTH] = detail['w']
                     self.dic[PARA_KEY_HEIGHT] = detail['h']
                     self.dic['flowtype'] = detail['flowtype']
+                    self.dic['price'] = detail['floor']
                     if self.dic['flowtype'] == F_TYPE_MOBILE:
                         self.dic[PARA_KEY_ISMOBILE] = True
                         self.dic[PARA_KEY_ADX] = '99'
@@ -181,6 +182,7 @@ class CoreHttpHandler(tornado.web.RequestHandler):
                 if self.res:
                     self.dic[PARA_KEY_RID] = self.res[PARA_KEY_RID] = str(uuid.uuid1())
                     self.res['type'] = INTER_MSG_SHOW
+                    self.res['price'] = self.dic['price']
                     self.res[PARA_KEY_USER] = self.dic[PARA_KEY_USER]
                     self.res[PARA_KEY_ADX] = self.dic[PARA_KEY_ADX]
                     self.recordRes()
